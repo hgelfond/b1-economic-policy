@@ -76,7 +76,7 @@ d3.tsv("debt.csv", function(error, data) {
 
   focus.append("text")
       .attr("x", 9)
-      .attr("dy", ".35em");
+      .attr("dy", ".35em"); 
 
   svg.append("rect")
       .attr("class", "overlay")
