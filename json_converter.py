@@ -7,10 +7,11 @@ from datetime import datetime
 path = "~/Desktop/Code4Policy/Assignments/b1-economic-policy"
 
 #function
-df = pd.read_json()	
-df.to_csv()
+def to_csv():
+	df = pd.read_json()	
+	df.to_csv()
 	return df
-print("Saved")
+	print("Saved")
 
 
 
