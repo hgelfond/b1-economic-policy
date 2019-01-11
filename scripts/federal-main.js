@@ -1,11 +1,11 @@
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
+    width = 500 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var parseDate = d3.time.format("%d-%b-%y").parse,
+var parseDate = d3.time.format("%Y").parse,
     bisectDate = d3.bisector(function(d) { return d.date; }).left,
     formatValue = d3.format(",.2f"),
-    formatCurrency = function(d) { return "$" + formatValue(d); };
+    formatPercent = function(d) { return formatValue(d)+"%"; };
 
 var x = d3.time.scale()
     .range([0, width]);
@@ -23,23 +23,21 @@ var yAxis = d3.svg.axis()
 
 var line = d3.svg.line()
     .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.close); });
+    .y(function(d) { return y(d.debt_gdp_cbo); });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("div#cboChart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    .attr("class", "chart")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     .attr("id", "debt")
 
 
-d3.csv("debt.csv", function(error, data) {
+d3.tsv("debt.csv", function(error, data) {
   if (error) throw error;
-
   data.forEach(function(d) {
     d.date = parseDate(d.date);
-    d.close = +d.close;
+    d.debt_gdp_cbo = +d.debt_gdp_cbo;
   });
 
   data.sort(function(a, b) {
@@ -47,7 +45,7 @@ d3.csv("debt.csv", function(error, data) {
   });
 
   x.domain([data[0].date, data[data.length - 1].date]);
-  y.domain(d3.extent(data, function(d) { return d.close; }));
+  y.domain(d3.extent(data, function(d) { return d.debt_gdp_cbo; }));
 
   svg.append("g")
       .attr("class", "x axis")
@@ -94,7 +92,7 @@ d3.csv("debt.csv", function(error, data) {
         d0 = data[i - 1],
         d1 = data[i],
         d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-    focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
-    focus.select("text").text(formatCurrency(d.close));
+    focus.attr("transform", "translate(" + x(d.date) + "," + y(d.debt_gdp_cbo) + ")");
+    focus.select("text").text(formatPercent(d.debt_gdp_cbo));
   }
 });
