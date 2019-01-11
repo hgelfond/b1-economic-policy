@@ -73,3 +73,38 @@ text.category{
   fill: #666666;
   font-size: 14px;
 }
+
+body {
+  font: 10px sans-serif;
+}
+
+#debt .axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#debt .x.axis path {
+  display: none;
+}
+
+#debt .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#debt .overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+#debt .focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+
+
+
