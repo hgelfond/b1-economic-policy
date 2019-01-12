@@ -5,6 +5,7 @@ import json
 import argparse
 from collections import OrderedDict
 from time import sleep
+import pandas as pd
 
 def parse(ticker):
 	url = "http://finance.yahoo.com/quote/%s?p=%s"%(ticker,ticker)
@@ -43,7 +44,11 @@ if __name__=="__main__":
 	args = argparser.parse_args()
 	ticker = args.ticker
 	print ("Fetching data for %s"%(ticker))
+	all_scraped_data = []
 	scraped_data = parse(ticker)
+	all_scraped_data.append(scraped_data)
+	
 	print ("Writing data to output file")
 	with open('%s-summary.json'%(ticker),'w') as fp:
-		json.dump(scraped_data,fp,indent = 4)
+		json.dump(all_scraped_data,fp,indent = 4)
+
