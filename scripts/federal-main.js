@@ -33,7 +33,7 @@ var svg = d3.select("div#cboChart").append("svg")
     .attr("id", "cboChart")
 
 
-d3.tsv("debt.txt", function(error, data) {
+d3.csv("debt.csv", function(error, data) {
   if (error) throw error;
   
   data.forEach(function(d) {
