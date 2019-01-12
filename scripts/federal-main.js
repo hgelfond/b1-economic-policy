@@ -30,7 +30,7 @@ var svg = d3.select("div#cboChart").append("svg")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-    .attr("id", "debt")
+    .attr("id", "cboChart")
 
 
 d3.tsv("debt.csv", function(error, data) {

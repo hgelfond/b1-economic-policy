@@ -78,33 +78,73 @@ body {
   font: 10px sans-serif;
 }
 
-#debt .axis path,
+#cboChart .axis path,
 .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-#debt .x.axis path {
+#cboChart .x.axis path {
   display: none;
 }
 
-#debt .line {
+#cboChart .line {
   fill: none;
   stroke: steelblue;
   stroke-width: 1.5px;
 }
 
-#debt .overlay {
+#cboChart .overlay {
   fill: none;
   pointer-events: all;
 }
 
-#debt .focus circle {
+#cboChart .focus circle {
   fill: none;
   stroke: steelblue;
 }
 
 
+#mobility .states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
 
+#mobility .states-choropleth {
+  fill: #ccc;
+}
 
+#mobility #tooltip-container {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+
+#mobility .tooltip_key {
+  font-weight: bold;
+}
+
+#mobility .tooltip_value {
+  margin-left: 20px;
+  float: right;
+}
+
+#facts {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#facts td, #facts th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+#facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
+
+#facts tr:hover {background-color: #ddd;}
