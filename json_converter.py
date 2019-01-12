@@ -7,11 +7,11 @@ from datetime import datetime
 path = "~/Desktop/Code4Policy/Assignments/b1-economic-policy"
 
 #function
-def to_csv():
-	df = pd.read_json()	
-	df.to_csv()
-	return df
+def save_csv(json_variable):
+	df = pd.read_json(json_variable)	
+	df.to_csv("output.csv")
 	print("Saved")
-
+	
+save_csv("aapl-summary.json")
 
 
