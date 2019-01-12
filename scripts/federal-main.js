@@ -33,12 +33,14 @@ var svg = d3.select("div#cboChart").append("svg")
     .attr("id", "cboChart")
 
 
-d3.tsv("debt.csv", function(error, data) {
+d3.tsv("debt.txt", function(error, data) {
   if (error) throw error;
+  
   data.forEach(function(d) {
     d.date = parseDate(d.date);
     d.debt_gdp_cbo = +d.debt_gdp_cbo;
   });
+ 
 
   data.sort(function(a, b) {
     return a.date - b.date;
