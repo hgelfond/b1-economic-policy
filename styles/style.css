@@ -105,6 +105,86 @@ body {
   stroke: steelblue;
 }
 
+text {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  fill: #777;
+}
+
+.axis {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.axis--y line {
+  display: none;
+}
+
+.axis--x line {
+  stroke: #eee;
+}
+
+.axis .domain {
+  fill: none;
+  stroke: none;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #eee;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+rect.bar {
+  fill: #ABD80A;
+  shape-rendering: crispEdges;
+}
+
+.year,
+.total {
+  text-anchor: end;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.total {
+  font-size: 20px;
+  fill: #ABD80A;
+}
+
+.year {
+  font-size: 14px;
+}
+
 
 
 
