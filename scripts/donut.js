@@ -12,10 +12,12 @@
   var svg = d3.select("#chart").append("svg")
       .attr("width", fullWidth)
       .attr("height", fullHeight);
+      .attr("id", "donut")
 
   var g = svg.append("g")
       .attr("transform","translate(" + (fullWidth / 2) + "," + (fullHeight / 2) +")")
       .attr("class","chartGroup");
+      .attr("id", "donut")
 
   var donutWidth = ( width / 4);
 
