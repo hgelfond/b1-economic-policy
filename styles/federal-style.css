@@ -25,6 +25,11 @@
   stroke: steelblue;
 }
 
+#cboChart svg {
+  display: block;
+  margin: 0 auto;
+}
+
 #mobility .states {
   fill: none;
   stroke: #fff;
@@ -51,6 +56,11 @@
 #mobility .tooltip_value {
   margin-left: 20px;
   float: right;
+}
+
+#mobility svg {
+  display: block;
+  margin: 0 auto;
 }
 
 #facts {
@@ -109,21 +119,19 @@
 .jumbotron {
   background: #98C1D9;
   color: black;
-  text-align: left;
-  padding: 0
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
 }
 
 .navbar-inverse {
   background: #2E2F31;
   border: 0;
 }
-.navbar {
-  margin-bottom: 0;
-}
 
-.navbar-inverse .navbar-nav li a {
-  color: #FFFFFF;
-  font-size: 16px;
+.navbar a {
+  margin-bottom: 0;
+  color: white;
 }
 
 .container p {
@@ -146,4 +154,10 @@
   color: white;
   text-align: center;
 }
+
+img svg {
+  display: block;
+  margin: 0 auto;
+}
+
 
