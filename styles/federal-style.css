@@ -1,83 +1,3 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: inherit;
-}
-
-h1 {
-  font-size:150%;
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 300;
-  text-align: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left:3px;
-}
-h2 {
-  font-size: 13px;
-  font-style: italic;
-  color: gray;
-  margin-top:5px;
-  margin-bottom:5px;
-  margin-left:3px;
-}
-p {
-  font-size: 15px;
-  margin-top:15px;
-  margin-bottom:5px;
-  margin-left:3px;
-}
-
-#description{
-  width:600px;
-  margin:10px;
-  margin-left:5px;
-}
-
-#everything{
-  width:600px;
-  margin:20px;
-}
-
-#chart{
-  width:600px;
-  height:400px;
-}
-.bar{
-  fill:#eaeaea;
-}
-text.label{
-  fill: #777777;
-  color: #777777;
-  font-size: 20px;
-  font-weight: bold;
-}
-text.category{
-  fill: #666666;
-  font-size: 14px;
-}
-
-body {
-  font: 10px sans-serif;
-}
-
 #cboChart .axis path,
 .axis line {
   fill: none;
@@ -104,7 +24,6 @@ body {
   fill: none;
   stroke: steelblue;
 }
-
 
 #mobility .states {
   fill: none;
@@ -185,7 +104,46 @@ body {
 #donut rect {
     stroke-width: 2;
 }
+/*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
 
+.jumbotron {
+  background: #98C1D9;
+  color: black;
+  text-align: left;
+  padding: 0
+}
 
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+.navbar {
+  margin-bottom: 0;
+}
 
+.navbar-inverse .navbar-nav li a {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.container p {
+  font-size: 16px;
+}
+
+.container h2 {
+  font-size: 24px;
+}
+
+.container h1 {
+  font-weight: bold;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2E2F31;
+  color: white;
+  text-align: center;
+}
 
