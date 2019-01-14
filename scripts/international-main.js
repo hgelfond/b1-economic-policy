@@ -1,4 +1,5 @@
 
+(function(){
   var svg = d3.select("svg"),
       margin = {top: 120, right: 20, bottom: 20, left: 50},
       width = +svg.attr("width") - margin.left - margin.right,
@@ -124,3 +125,5 @@
     update();
     d3.event.preventDefault();
   }
+
+})();
