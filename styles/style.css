@@ -1,15 +1,3 @@
-
-#description{
-  width:800px;
-  margin:10px;
-  margin-left:5px;
-}
-
-#everything{
-  width:800px;
-  margin:20px;
-}
-
 #sliderChart text {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
@@ -89,4 +77,51 @@
 #sliderChart .year {
   font-size: 14px;
 }
+
+/*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
+
+.jumbotron {
+  background: #98C1D9;
+  color: black;
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
 }
+
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+
+.navbar a {
+  margin-bottom: 0;
+  color: white;
+}
+
+.container p {
+  font-size: 16px;
+}
+
+.container h2 {
+  font-size: 24px;
+}
+
+.container h1 {
+  font-weight: bold;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2E2F31;
+  color: white;
+  text-align: center;
+}
+
+img svg {
+  display: block;
+  margin: 0 auto;
+}
+
+
