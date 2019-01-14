@@ -124,6 +124,7 @@
     }
     update();
     d3.event.preventDefault();
-  }
+   }
+  });
 
 })();
