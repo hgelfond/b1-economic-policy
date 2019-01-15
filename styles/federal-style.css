@@ -6,13 +6,13 @@
 }
 
 #cboChart .x.axis path {
-  display: none;
+  display: block;
 }
 
 #cboChart .line {
   fill: none;
   stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke-width: 2px;
 }
 
 #cboChart .overlay {
@@ -160,4 +160,6 @@ img svg {
   margin: 0 auto;
 }
 
-
+#caption h1, p {
+  text-align: center;
+}
