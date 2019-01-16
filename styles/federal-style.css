@@ -114,14 +114,124 @@
 #donut rect {
     stroke-width: 2;
 }
+
+
+
+/*slider chart styling*/
+
+
+#sliderChart text {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  fill: #777;
+}
+
+#sliderChart .axis {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#sliderChart .axis--y line {
+  display: none;
+}
+
+#sliderChart .axis--x line {
+  stroke: #eee;
+}
+
+#sliderChart .axis .domain {
+  fill: none;
+  stroke: none;
+}
+
+#sliderChart .track,
+#sliderChart .track-inset,
+#sliderChart .track-overlay {
+  stroke-linecap: round;
+}
+
+#sliderChart .track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+#sliderChart .track-inset {
+  stroke: #eee;
+  stroke-width: 8px;
+}
+
+#sliderChart.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+#sliderChart .handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+#sliderChart rect.bar {
+  fill: #210794;
+  shape-rendering: crispEdges;
+}
+
+#sliderChart .year,
+#sliderChart .total {
+  text-anchor: end;
+}
+
+#sliderChart .title {
+  font-size: 24px;
+}
+
+#sliderChart .total {
+  font-size: 20px;
+  fill: #210794;
+}
+
+#sliderChart .year {
+  font-size: 14px;
+}
+
+
 /*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
 
 .jumbotron {
-  background: #98C1D9;
-  color: black;
+  background-image: url("../images/black-and-white-business-chart-241544.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  color: white;
   text-align: center;
   padding-top: 1;
   padding-bottom: 0;
+}
+
+.team-member {
+  margin-bottom:50px;
+  text-align:center;
+  img {
+    width: 225px;
+    height: 225px;
+    border:7px solid $white;
+  }
+  h4 {
+    margin-top:25px;  
+    margin-bottom:0px;
+    text-align:center;
+    text-transform:none;
+  }
+  p{
+    margin-top:0;
+  }
 }
 
 .navbar-inverse {
