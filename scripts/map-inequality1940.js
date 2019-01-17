@@ -150,7 +150,7 @@
           var map_width = $('.states-choropleth')[0].getBoundingClientRect().width;
 
           if (d3.event.layerX < map_width / 2) {
-            d3.select("#tooltip-container")
+            d3.select("#tooltip-container40")
             .style("top", (d3.event.layerY + 15) + "px")
             .style("left", (d3.event.layerX + 15) + "px");
           } else {

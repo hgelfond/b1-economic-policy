@@ -90,17 +90,17 @@ h1, p {
 
 /*MOBILITY MAP*/
 
-#mobility80 .states {
+#mobility80 .states, #mobility40 .states {
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
 }
 
-#mobility80 .states-choropleth {
+#mobility80 .states-choropleth, #mobility40 .states-choropleth {
   fill: #ccc;
 }
 
-#mobility80 #tooltip-container {
+#mobility80 #tooltip-container, #mobility40 #tooltip-container {
   position: absolute;
   background-color: #fff;
   color: #000;
@@ -109,59 +109,26 @@ h1, p {
   display: none;
 }
 
-#mobility80 .tooltip_key {
+
+#mobility .tooltip_key {
   font-weight: bold;
 }
 
-#mobility80 .tooltip_value {
+#mobility .tooltip_value  {
   margin-left: 20px;
-  float: right;
+  float: left;
 }
 
-#mobility80 svg {
+#mobility svg {
   display: block;
   margin: 0 auto;
 }
 
-/*MOBILITY MAP*/
-
-#mobility40 .states {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-
-#mobility40 .states-choropleth {
-  fill: #ccc;
-}
-
-#mobility40 #tooltip-container {
-  position: absolute;
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
-  border: 1px solid;
-  display: none;
-}
-
-#mobility40 .tooltip_key {
-  font-weight: bold;
-}
-
-#mobility40 .tooltip_value {
-  margin-left: 20px;
-  float: right;
-}
-
-#mobility40 svg {
-  display: block;
-  margin: 0 auto;
-}
 
 
 /*REVENUE CHART*/
 #revenue svg, #spending svg {
-font: 12px sans-serif;
+font: 14px sans-serif;
 shape-rendering: crispEdges;
 }
 
@@ -169,15 +136,16 @@ shape-rendering: crispEdges;
 #revenue .axis path,
 #revenue .axis line, #spending .axis path, #spending .axis line {
 fill: none;
-stroke: #000;
+stroke:none;
 }
 
 #revenue path.domain, #spending path.domain {
 stroke: none;
+
 }
 
 #revenue .y .tick line, #spending .y .tick line  {
-stroke: #ddd;
+stroke: none;
 }
 
 /*slider chart styling*/
