@@ -90,17 +90,17 @@ h1, p {
 
 /*MOBILITY MAP*/
 
-#mobility .states {
+#mobility80 .states {
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
 }
 
-#mobility .states-choropleth {
+#mobility80 .states-choropleth {
   fill: #ccc;
 }
 
-#mobility #tooltip-container {
+#mobility80 #tooltip-container {
   position: absolute;
   background-color: #fff;
   color: #000;
@@ -109,21 +109,21 @@ h1, p {
   display: none;
 }
 
-#mobility .tooltip_key {
+#mobility80 .tooltip_key {
   font-weight: bold;
 }
 
-#mobility .tooltip_value {
+#mobility80 .tooltip_value {
   margin-left: 20px;
   float: right;
 }
 
-#mobility svg {
+#mobility80 svg {
   display: block;
   margin: 0 auto;
 }
 
-/*MOBILITY MAP
+/*MOBILITY MAP*/
 
 #mobility40 .states {
   fill: none;
@@ -157,7 +157,7 @@ h1, p {
   display: block;
   margin: 0 auto;
 }
-*/
+
 
 /*REVENUE CHART*/
 #revenue svg, #spending svg {
