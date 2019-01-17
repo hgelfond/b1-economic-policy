@@ -1,203 +1,253 @@
 <!DOCTYPE html>
-<html>
+<meta charset="utf-8">
+<style>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="styles/style.css" rel="stylesheet" type = "text/css">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+  height: 500px;
+  position: relative;
+}
 
-<body>
-  <nav class="navbar navbar-inverse fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button> -->
-      <a class="navbar-brand" href="https://hgelfond.github.io/b1-economic-policy/index.html">Economic Policy: A Project for DPI-691</a>
-    </div>
-     <li><a href="https://hgelfond.github.io/b1-economic-policy/index.html">Home</a></li>
-    <li><a href="https://hgelfond.github.io/b1-economic-policy/nyc-municipal.html">NYC Municipal</a></li>
-    <li><a href="https://hgelfond.github.io/b1-economic-policy/federal-economic-data.html">U.S. Federal</a></li>
-    <li><a href="https://hgelfond.github.io/b1-economic-policy/international-economic-data.html">International</a></li>
-    <li><a href="https://hgelfond.github.io/b1-economic-policy/private-sector-finance.html">Private Sector</a></li>
-   <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://hgelfond.github.io/b1-economic-policy/index.html">Home</a></li>
-        <li><a href="https://hgelfond.github.io/b1-economic-policy/nyc-municipal.html">NYC Municipal</a></li>
-        <li><a href="https://hgelfond.github.io/b1-economic-policy/federal-economic-data.html">U.S. Federal</a></li>
-        <li><a href="https://hgelfond.github.io/b1-economic-policy/international-economic-data.html">International</a></li>
-        <li><a href="https://hgelfond.github.io/b1-economic-policy/private-sector-finance.html">Private Sector Finance</a></li>
-      </ul>
-    </div> -->
-  </div>
-  </nav>
+#worlmap-canvas-svg {
+}
+
+
+.land {
+  fill: #222;
+}
+
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+#worldmap-tooltip-container {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+
+.tooltip_key {
+  font-weight: bold;
+}
+
+.tooltip_value {
+  margin-left: 20px;
+  float: right;
+}
+
+</style>
+
+<div id="worldmap-tooltip-container"></div>
+
+<div id="worldmap-canvas-svg"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+
+d3.csv("data/worldmap.csv", function(err, data) {
+
+  var config = {"data0":"Country (or dependent territory)","data1":"GDPC",
+              "label0":"label 0","label1":"label 1","color0":"#99ccff","color1":"#0050A1",
+              "width":960,"height":960}
   
-<div class="jumbotron">
-  <div class="container">
-    <div id="description">
-    <br>
-    <h2>International Economic Data</h2>
-    <h1>Where does the US stand internationally?</h1>
-    <h2>Comparison among G7 countries (Canada, France, Germany, Italy, Japan, the United Kingdom, and the United States) on economic indicators </h2>
-    <h3>By: <a href="https://www.linkedin.com/in/jun-mukoyama-oikawa-a35909104/"> Jun Mukoyama</a></h3>
-      <br>
-
-    <div id="sliderChart">
-    <h2>Which country's debt grew from 1995 to 2016?</h2>  
-    <svg width="650" height="450"></svg>
-    <p>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p>
-    <br>
-
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-     <script>
-  var svg = d3.select("svg"),
-      margin = {top: 120, right: 20, bottom: 20, left: 50},
-      width = +svg.attr("width") - margin.left - margin.right,
-      height = +svg.attr("height") - margin.top - margin.bottom,
-      g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-  var x = d3.scaleLinear().range([0, width]),
-      y = d3.scaleBand().paddingInner(0.4).paddingOuter(0.4).rangeRound([0, height]),
-      t = d3.scaleLinear().range([0, width - 50]).clamp(true);
-  var data,
-      title,
-      handle,
-      currentValue;
-  d3.select(window)
-      .on("keydown", keydowned);
-  d3.csv("intldata3.csv", function(error, _data) {
-    if (error) throw error;
-    title = _data.columns[0];
-    data = d3.entries(_data).slice(0,-1).map(function(d) { return d.value; });
-    x.domain([0, Math.round(d3.max(data, function(d) { return +d3.max(d3.values(d).slice(0,-1)); }) / 10) * 10]);
-    y.domain(data.map(function(d) { return d[title]; }));
-    t.domain(d3.extent(d3.keys(data[0]).slice(0,-1)));
-    currentValue = t.domain()[1];
-    g.append("text")
-        .attr("class", "total")
-        .attr("x", width)
-        .attr("y", -80)
-        .attr("dy", "0.35em")
-        .text("");
-    g.append("g")
-        .attr("class", "axis axis--y")
-        .call(d3.axisLeft(y));
-    g.append("g")
-        .attr("class", "axis axis--x")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x)
-          .ticks(4, ".0s")
-          .tickSize(-height))
-        .select(".tick:last-of-type text")
-        .select(function() { return this.parentNode.appendChild(this.cloneNode()); })
-          .attr("y", -12)
-          .attr("text-anchor", "end")
-          .text("(trillion US$)");
-    var slider = svg.append("g")
-        .attr("class", "slider")
-        .attr("transform", "translate(" + margin.left + "," + margin.top / 1.5 + ")");
-    slider.append("line")
-        .attr("class", "track")
-        .attr("x1", t.range()[0])
-        .attr("x2", t.range()[1])
-      .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
-        .attr("class", "track-inset")
-      .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
-        .attr("class", "track-overlay")
-        .call(d3.drag()
-            .on("start.interrupt", function() { slider.interrupt(); })
-            .on("start drag", function() {
-              currentValue = Math.round(t.invert(d3.event.x));
-              update();
-            }));
-    slider.insert("g", ".track-overlay")
-        .attr("class", "ticks")
-        .attr("transform", "translate(0," + 18 + ")")
-      .selectAll("text")
-      .data(t.ticks(5))
-      .enter().append("text")
-        .attr("x", t)
-        .attr("text-anchor", "middle")
-        .text(function(d) { return d; });
-    slider.append("text")
-        .attr("class", "year")
-        .attr("x", width)
-        .attr("dy", "0.35em")
-        .text("year");
-    handle = slider.insert("circle", ".track-overlay")
-        .attr("class", "handle")
-        .attr("r", 8);
-    update();
-  });
-  function update() {
-    var bar = g.selectAll(".bar")
-        .data(data, function(d) { return d[title]; });
-    bar.enter().append("rect")
-        .attr("class", "bar")
-        .attr("y", function (d) { return y(d[title]); })
-        .attr("height", y.bandwidth())
-        .attr("width", function(d) { return x(d[currentValue]); });
-    bar.append("text").text(function(d) { return d[currentValue]; });
-    bar.transition()
-        .duration(750)
-        .ease(d3.easeLinear)
-        .attr("width", function(d) { return x(d[currentValue]); });
-    handle.attr("cx", t(currentValue));
-    
+  var width = config.width,
+      height = config.height;
+  
+  var COLOR_COUNTS = 9;
+  
+  function Interpolate(start, end, steps, count) {
+      var s = start,
+          e = end,
+          final = s + (((e - s) / steps) * count);
+      return Math.floor(final);
   }
-  function keydowned() {
-    if (d3.event.metaKey || d3.event.altKey) return;
-    switch (d3.event.keyCode) {
-      case 37: currentValue = Math.max(t.domain()[0], currentValue - 1); break;
-      case 39: currentValue = Math.min(t.domain()[1], currentValue + 1); break;
-      default: return;
+  
+  function Color(_r, _g, _b) {
+      var r, g, b;
+      var setColors = function(_r, _g, _b) {
+          r = _r;
+          g = _g;
+          b = _b;
+      };
+  
+      setColors(_r, _g, _b);
+      this.getColors = function() {
+          var colors = {
+              r: r,
+              g: g,
+              b: b
+          };
+          return colors;
+      };
+  }
+  
+  function hexToRgb(hex) {
+      var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16)
+      } : null;
+  }
+  
+  //*change numbers to fit GDP//
+  function valueFormat(d) {
+    if (d > 1000) {
+      return Math.round(d / 1000) + "k";
+    } else {
+      return Math,round(d);
     }
-    update();
-    d3.event.preventDefault();
   }
-    </script>
-    </div>
-    </div>
-  </div>
-</div>
+  
+  var COLOR_FIRST = config.color0, COLOR_LAST = config.color1;
+  
+  var rgb = hexToRgb(COLOR_FIRST);
+  
+  var COLOR_START = new Color(rgb.r, rgb.g, rgb.b);
+  
+  rgb = hexToRgb(COLOR_LAST);
+  var COLOR_END = new Color(rgb.r, rgb.g, rgb.b);
+  
+  var startColors = COLOR_START.getColors(),
+      endColors = COLOR_END.getColors();
+  
+  var colors = [];
+  
+  for (var i = 0; i < COLOR_COUNTS; i++) {
+    var r = Interpolate(startColors.r, endColors.r, COLOR_COUNTS, i);
+    var g = Interpolate(startColors.g, endColors.g, COLOR_COUNTS, i);
+    var b = Interpolate(startColors.b, endColors.b, COLOR_COUNTS, i);
+    colors.push(new Color(r, g, b));
+  }
+  
+  var MAP_KEY = config.data0;
+  var MAP_VALUE = config.data1;
+  
+  var projection = d3.geo.mercator()
+      .scale((width + 1) / 2 / Math.PI)
+      .translate([width / 2, height / 2])
+      .precision(.1);
+  
+  var path = d3.geo.path()
+      .projection(projection);
+  
+  var graticule = d3.geo.graticule();
+  
+  var svg = d3.select("#worldmap-canvas-svg").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+  
+  svg.append("path")
+      .datum(graticule)
+      .attr("class", "graticule")
+      .attr("d", path);
+  
+  var valueHash = {};
+  
+  function log10(val) {
+    return Math.log(val);
+  }
+  
+  data.forEach(function(d) {
+    valueHash[d[MAP_KEY]] = +d[MAP_VALUE];
+  });
+  
+  var quantize = d3.scale.quantize()
+      .domain([0, 1.0])
+      .range(d3.range(COLOR_COUNTS).map(function(i) { return i }));
+  
+  quantize.domain([d3.min(data, function(d){
+      return (+d[MAP_VALUE]) }),
+    d3.max(data, function(d){
+      return (+d[MAP_VALUE]) })]);
+  
+  d3.json("https://s3-us-west-2.amazonaws.com/vida-public/geo/world-topo-min.json", function(error, world) {
+    var countries = topojson.feature(world, world.objects.countries).features;
+  
+    svg.append("path")
+       .datum(graticule)
+       .attr("class", "choropleth")
+       .attr("d", path);
+  
+    var g = svg.append("g");
+  
+    g.append("path")
+     .datum({type: "LineString", coordinates: [[-180, 0], [-90, 0], [0, 0], [90, 0], [180, 0]]})
+     .attr("class", "equator")
+     .attr("d", path);
+  
+    var country = g.selectAll(".country").data(countries);
+  
+    country.enter().insert("path")
+        .attr("class", "country")
+        .attr("d", path)
+        .attr("id", function(d,i) { return d.id; })
+        .attr("title", function(d) { return d.properties.name; })
+        .style("fill", function(d) {
+          if (valueHash[d.properties.name]) {
+            var c = quantize((valueHash[d.properties.name]));
+            var color = colors[c].getColors();
+            return "rgb(" + color.r + "," + color.g +
+                "," + color.b + ")";
+          } else {
+            return "#ccc";
+          }
+        })
+        .on("mousemove", function(d) {
+            var html = "";
+  
+            html += "<div class=\"tooltip_kv\">";
+            html += "<span class=\"tooltip_key\">";
+            html += d.properties.name;
+            html += "</span>";
+            html += "<span class=\"tooltip_value\">";
+            html += (valueHash[d.properties.name] ? valueFormat(valueHash[d.properties.name]) : "");
+            html += "";
+            html += "</span>";
+            html += "</div>";
+            
+            $("#tooltip-container").html(html);
+            $(this).attr("fill-opacity", "0.8");
+            $("#tooltip-container").show();
+            
+            var coordinates = d3.mouse(this);
+            
+            var map_width = $('.choropleth')[0].getBoundingClientRect().width;
+            
+            if (d3.event.pageX < map_width / 2) {
+              d3.select("#tooltip-container")
+                .style("top", (d3.event.layerY + 15) + "px")
+                .style("left", (d3.event.layerX + 15) + "px");
+            } else {
+              var tooltip_width = $("#tooltip-container").width();
+              d3.select("#tooltip-container")
+                .style("top", (d3.event.layerY + 15) + "px")
+                .style("left", (d3.event.layerX - tooltip_width - 30) + "px");
+            }
+        })
+        .on("mouseout", function() {
+                $(this).attr("fill-opacity", "1.0");
+                $("#tooltip-container").hide();
+            });
+    
+    g.append("path")
+        .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
+        .attr("class", "boundary")
+        .attr("d", path);
+    
+    svg.attr("height", config.height * 2.2 / 3);
+  });
+  
+  d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
+});
 
-
-<h2>Debt to GDP Ratio of G7+3 countries</h2>
-   <p>General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. </p>
-
-<p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
-        <br>
-        <br>
-   </div>
-  </div>
-
-<br>
-<br>
-<br>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-</body>
-
-<footer>
-    <div class="container-fluid text-center text-md-left">
-    <div class="footer">
-      DPI:691: Programming and Data for Policymakers, Harvard Kennedy School. Last Updated: 01-14-2019
-    </div>
-    </div>
-</footer>
-
-</html>
+</script>
