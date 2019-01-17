@@ -5,9 +5,9 @@ This readme file contains information about how our website was created. Each se
 INDEX
 ----------------------------------------------------------------------------
 
-
-
-
+1. World Map
+GDP per capita data was downloaded from the Wolrd Bank website: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+Modified the cvs data using Excel to extract only header, country name, and GDP per capita data in 2017. Sorted and inserted ranks.
 
 
 ----------------------------------------------------------------------------
