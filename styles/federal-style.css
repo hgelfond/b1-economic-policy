@@ -1,3 +1,60 @@
+/*NAV BAR STYLES*/
+
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+
+.navbar a {
+  margin-bottom: 0;
+  color: white;
+}
+
+.container p {
+  font-size: 16px;
+}
+/*JUMBOTRON STYLES*/
+
+.jumbotron {
+  background: #98C1D9;
+  color: black;
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
+}
+
+.container h2 {
+  font-size: 24px;
+}
+
+.container h1 {
+  font-weight: bold;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2E2F31;
+  color: white;
+  text-align: center;
+}
+
+img svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/*GENERAL BODY FORMATTING*/
+
+h1, p {
+  padding-left: 2px
+  padding-right: 2px;
+}
+
+
+/*DEBT CHART*/
+
 #cboChart .axis path,
 .axis line {
   fill: none;
@@ -30,17 +87,20 @@
   margin: 0 auto;
 }
 
-#mobility .states {
+
+/*MOBILITY MAP*/
+
+#mobility80 .states {
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
 }
 
-#mobility .states-choropleth {
+#mobility80 .states-choropleth {
   fill: #ccc;
 }
 
-#mobility #tooltip-container {
+#mobility80 #tooltip-container {
   position: absolute;
   background-color: #fff;
   color: #000;
@@ -49,112 +109,176 @@
   display: none;
 }
 
-#mobility .tooltip_key {
+#mobility80 .tooltip_key {
   font-weight: bold;
 }
 
-#mobility .tooltip_value {
+#mobility80 .tooltip_value {
   margin-left: 20px;
   float: right;
 }
 
-#mobility svg {
+#mobility80 svg {
   display: block;
   margin: 0 auto;
 }
 
-#facts {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 50%;
+/*MOBILITY MAP*/
+
+#mobility40 .states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
 }
 
-#facts td, #facts th {
-  border: 1px solid #ddd;
-  padding: 4px;
+#mobility40 .states-choropleth {
+  fill: #ccc;
 }
 
-#facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
-
-#facts tr:hover {background-color: #ddd;}
-
-#donut {
-    position: relative; /* To allow the tooltip to be positioned relative to the div */
-    display: block;
-    width: 600px;
-    margin: 0 auto;
+#mobility40 #tooltip-container {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
 }
 
-#donut .tooltip {
-    position: absolute;
-    width: 80px;
-    padding: 10px;
-    background: #eee;
-    color: #333;
-    display: none;
-    font-size: 12px;
-    text-align: center;
-    box-shadow: 0 0 5px #999;
-    z-index: 10;
+#mobility40 .tooltip_key {
+  font-weight: bold;
 }
 
-#donut rect {
-    cursor: pointer;
-    stroke-width: 2;
+#mobility40 .tooltip_value {
+  margin-left: 20px;
+  float: right;
 }
 
-#donut rect.disabled {
-    fill: transparent !important;
+#mobility40 svg {
+  display: block;
+  margin: 0 auto;
 }
 
-#donut legend {
-    font-size: 18px;
+
+/*REVENUE CHART*/
+#revenue svg, #spending svg {
+font: 12px sans-serif;
+shape-rendering: crispEdges;
 }
 
-#donut rect {
-    stroke-width: 2;
+
+#revenue .axis path,
+#revenue .axis line, #spending .axis path, #spending .axis line {
+fill: none;
+stroke: #000;
 }
+
+#revenue path.domain, #spending path.domain {
+stroke: none;
+}
+
+#revenue .y .tick line, #spending .y .tick line  {
+stroke: #ddd;
+}
+
+/*slider chart styling*/
+
+
+#sliderChart text {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  fill: #777;
+}
+
+#sliderChart .axis {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#sliderChart .axis--y line {
+  display: none;
+}
+
+#sliderChart .axis--x line {
+  stroke: #eee;
+}
+
+#sliderChart .axis .domain {
+  fill: none;
+  stroke: none;
+}
+
+#sliderChart .track,
+#sliderChart .track-inset,
+#sliderChart .track-overlay {
+  stroke-linecap: round;
+}
+
+#sliderChart .track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+#sliderChart .track-inset {
+  stroke: #eee;
+  stroke-width: 8px;
+}
+
+#sliderChart.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+#sliderChart .handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+#sliderChart rect.bar {
+  fill: #210794;
+  shape-rendering: crispEdges;
+}
+
+#sliderChart .year,
+#sliderChart .total {
+  text-anchor: end;
+}
+
+#sliderChart .title {
+  font-size: 24px;
+}
+
+#sliderChart .total {
+  font-size: 20px;
+  fill: #210794;
+}
+
+#sliderChart .year {
+  font-size: 14px;
+}
+
+
 /*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
 
 .jumbotron {
-  background: #98C1D9;
-  color: black;
+  background-image: url("../images/black-and-white-business-chart-241544.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  color: white;
   text-align: center;
   padding-top: 1;
   padding-bottom: 0;
 }
 
-.navbar-inverse {
-  background: #2E2F31;
-  border: 0;
-}
-
-.navbar a {
-  margin-bottom: 0;
-  color: white;
-}
-
-.container p {
-  font-size: 16px;
-}
-
-.container h2 {
-  font-size: 24px;
-}
-
-.container h1 {
-  font-weight: bold;
-}
-
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #2E2F31;
-  color: white;
-  text-align: center;
-}
-
+<<<<<<< HEAD
 #caption h1, p {
   text-align: center;
 }
@@ -212,3 +336,49 @@ text.label {
 text.source {
   font-size: 10px;
 }
+=======
+.team-member {
+  margin-bottom:50px;
+  text-align:center;
+  img {
+    width: 225px;
+    height: 225px;
+    border:7px solid $white;
+  }
+  h4 {
+    margin-top:25px;  
+    margin-bottom:0px;
+    text-align:center;
+    text-transform:none;
+  }
+  p{
+    margin-top:0;
+  }
+}
+
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+/*QUICK FACTS STYLES - THIS SHOULD BE USED FOR ANY OTHER TABLES ALSO*/
+
+#facts {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#facts td, #facts th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+#facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
+
+#facts tr:hover {background-color: #ddd;}
+
+/*WORLD MAP at Index.html*/
+
+
+
+>>>>>>> 141bbb9c641cd5a0b54383b39a0d8199fb9c27ac
