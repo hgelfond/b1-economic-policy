@@ -1,6 +1,7 @@
 
 (function(){
-  var svg = d3.select("svg"),
+  var svg = d3.select("body").append("svg"),
+      .attr("id","sliderChart")
       margin = {top: 120, right: 20, bottom: 20, left: 50},
       width = +svg.attr("width") - margin.left - margin.right,
       height = +svg.attr("height") - margin.top - margin.bottom,
