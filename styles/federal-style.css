@@ -90,17 +90,29 @@ h1, p {
 
 /*MOBILITY MAP*/
 
+<<<<<<< HEAD
 #mobility80 .states, #mobility40 .states {
+=======
+#mobility40 .states, #mobility80 .states {
+>>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
 }
 
+<<<<<<< HEAD
 #mobility80 .states-choropleth, #mobility40 .states-choropleth {
   fill: #ccc;
 }
 
 #mobility80 #tooltip-container, #mobility40 #tooltip-container {
+=======
+#mobility40 .states-choropleth, #mobility80 .states-choropleth {
+  fill: #ccc;
+}
+
+#tooltip-container40, #tooltip-container80 {
+>>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
   position: absolute;
   background-color: #fff;
   color: #000;
@@ -109,6 +121,7 @@ h1, p {
   display: none;
 }
 
+<<<<<<< HEAD
 
 #mobility .tooltip_key {
   font-weight: bold;
@@ -117,12 +130,26 @@ h1, p {
 #mobility .tooltip_value  {
   margin-left: 20px;
   float: left;
+=======
+#mobility80 .tooltip_key, #mobility40 .tooltip_key {
+  font-weight: bold;
+}
+
+#mobility80 .tooltip_value, #mobility40 .tooltip_value {
+  margin-left: 20px;
+  float: right;
+>>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
 }
 
 #mobility svg {
   display: block;
   margin: 0 auto;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
 
 
 
@@ -285,4 +312,8 @@ stroke: none;
 #facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
 
 #facts tr:hover {background-color: #ddd;}
+
+/*WORLD MAP at Index.html*/
+
+
 
