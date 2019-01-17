@@ -90,7 +90,7 @@
     
     var path = d3.geo.path();
     
-    var svg = d3.select("#canvas-svg").append("svg")
+    var svg = d3.select("#canvas-svg80").append("svg")
     .attr("width", width)
     .attr("height", height);
     
@@ -141,28 +141,28 @@
           html += "</span>";
           html += "</div>";
 
-          $("#tooltip-container").html(html);
+          $("#tooltip-container80").html(html);
           $(this).attr("fill-opacity", "0.8");
-          $("#tooltip-container").show();
+          $("#tooltip-container80").show();
 
           var coordinates = d3.mouse(this);
 
           var map_width = $('.states-choropleth')[0].getBoundingClientRect().width;
 
           if (d3.event.layerX < map_width / 2) {
-            d3.select("#tooltip-container")
+            d3.select("#tooltip-container80")
             .style("top", (d3.event.layerY + 15) + "px")
             .style("left", (d3.event.layerX + 15) + "px");
           } else {
-            var tooltip_width = $("#tooltip-container").width();
-            d3.select("#tooltip-container")
+            var tooltip_width = $("#tooltip-container80").width();
+            d3.select("#tooltip-container80")
             .style("top", (d3.event.layerY + 15) + "px")
             .style("left", (d3.event.layerX - tooltip_width - 30) + "px");
           }
         })
         .on("mouseout", function() {
           $(this).attr("fill-opacity", "1.0");
-          $("#tooltip-container").hide();
+          $("#tooltip-container80").hide();
         });
 
         svg.append("path")
