@@ -1,0 +1,204 @@
+/*NAV BAR STYLES*/
+
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+
+.navbar a {
+  margin-bottom: 0;
+  color: white;
+}
+
+.container p {
+  font-size: 16px;
+}
+/*JUMBOTRON STYLES*/
+
+.jumbotron {
+  color: black;
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
+}
+
+.container h2 {
+  font-size: 24px;
+}
+
+.container h1 {
+  font-weight: bold;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2E2F31;
+  color: white;
+  text-align: center;
+}
+
+img svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/*GENERAL BODY FORMATTING*/
+
+h1, p {
+  padding-left: 2px
+  padding-right: 2px;
+}
+
+
+
+/*MOBILITY MAP*/
+
+#mobility40 .states, #mobility80 .states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+#mobility80 .states-choropleth, #mobility40 .states-choropleth {
+  fill: #ccc;
+}
+
+#mobility40 .states-choropleth, #mobility80 .states-choropleth {
+  fill: #ccc;
+}
+
+#tooltip-container40, #tooltip-container80 {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+
+#mobility80 .tooltip_key, #mobility40 .tooltip_key {
+  font-weight: bold;
+}
+
+#mobility80 .tooltip_value, #mobility40 .tooltip_value {
+  margin-left: 20px;
+  float: right;
+}
+
+#mobility svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
+
+.jumbotron {
+  background-image: url("../images/black-and-white-business-chart-241544.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
+}
+
+#caption h1, p {
+  text-align: center;
+}
+
+div#layout {
+  text-align: center;
+}
+
+
+.bar {
+  fill: #80cbc4;
+}
+
+text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: red;
+}
+
+#limit line {
+  stroke-width: 3;
+  stroke-dasharray: 50;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+text.divergence {
+  font-size: 14px;
+  fill: #2F4A6D;
+}
+
+text.value {
+  font-size: 14px;
+}
+
+text.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+text.label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+text.source {
+  font-size: 10px;
+}
+
+.team-member {
+  margin-bottom:50px;
+  text-align:center;
+  img {
+    width: 225px;
+    height: 225px;
+    border:7px solid $white;
+  }
+  
+  h4 {
+    margin-top:25px;  
+    margin-bottom:0px;
+    text-align:center;
+    text-transform:none;
+  }
+  p{
+    margin-top:0;
+  }
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+/*QUICK FACTS STYLES - THIS SHOULD BE USED FOR ANY OTHER TABLES ALSO*/
+
+#facts {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#facts td, #facts th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+#facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
+
+#facts tr:hover {background-color: #ddd;}

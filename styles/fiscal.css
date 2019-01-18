@@ -1,0 +1,204 @@
+/*NAV BAR STYLES*/
+
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+
+.navbar a {
+  margin-bottom: 0;
+  color: white;
+}
+
+.container p {
+  font-size: 16px;
+}
+/*JUMBOTRON STYLES*/
+
+.jumbotron {
+  color: black;
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
+}
+
+.container h2 {
+  font-size: 24px;
+}
+
+.container h1 {
+  font-weight: bold;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2E2F31;
+  color: white;
+  text-align: center;
+}
+
+img svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/*GENERAL BODY FORMATTING*/
+
+h1, p {
+  padding-left: 2px
+  padding-right: 2px;
+}
+
+
+/*DEBT CHART*/
+
+#cboChart .axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#cboChart .x.axis path {
+  display: block;
+}
+
+#cboChart .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+#cboChart .overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+#cboChart .focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+#cboChart svg {
+  display: block;
+  margin: 0 auto;
+}
+
+
+/*REVENUE CHART*/
+#revenue svg, #spending svg {
+font: 14px sans-serif;
+shape-rendering: crispEdges;
+}
+
+
+#revenue .axis path,
+#revenue .axis line, #spending .axis path, #spending .axis line {
+fill: none;
+stroke:none;
+}
+
+#revenue path.domain, #spending path.domain {
+stroke: none;
+}
+
+#revenue .y .tick line, #spending .y .tick line  {
+stroke: none;
+}
+
+/*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
+
+.jumbotron {
+  background-image: url("../images/black-and-white-business-chart-241544.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
+}
+
+#caption h1, p {
+  text-align: center;
+}
+
+div#layout {
+  text-align: center;
+}
+
+
+.bar {
+  fill: #80cbc4;
+}
+
+text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: red;
+}
+
+#limit line {
+  stroke-width: 3;
+  stroke-dasharray: 50;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+text.divergence {
+  font-size: 14px;
+  fill: #2F4A6D;
+}
+
+text.value {
+  font-size: 14px;
+}
+
+text.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+text.label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+text.source {
+  font-size: 10px;
+}
+
+.team-member {
+  margin-bottom:50px;
+  text-align:center;
+  img {
+    width: 225px;
+    height: 225px;
+    border:7px solid $white;
+  }
+  
+  h4 {
+    margin-top:25px;  
+    margin-bottom:0px;
+    text-align:center;
+    text-transform:none;
+  }
+  p{
+    margin-top:0;
+  }
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
