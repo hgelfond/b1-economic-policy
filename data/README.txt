@@ -7,7 +7,7 @@ INDEX
 
 1. World Map
 GDP per capita data was downloaded from the Wolrd Bank website: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
-Modified the cvs data using Excel to extract only header, country name, and GDP per capita data in 2017. Sorted and inserted ranks.
+Modified the cvs data using Excel to extract only header, country name, and GDP per capita data in 2017. Sorted and inserted ranks. Graphic created in Stata following tutorial from: https://www.stata.com/support/faqs/graphics/spmap-and-maps/.
 
 
 ----------------------------------------------------------------------------
@@ -34,9 +34,8 @@ The source code for the US state map can be found online at: https://bl.ocks.org
 ASSET VALUATION
 ----------------------------------------------------------------------------
 
-
-
-
+1. Dow Jones Industrial Average Over-Valued Or Under-Valued by Sector
+Data scraped using custom scraper from yahoo.finance.com for all 30 stocks in the Dow Jones Industrial Average (DJIA), converted into JSON file and then transformed into CSV format with custom data stamp. CSV files then moved into Output folder containing the files. Shell protocal written to streamline workflow. Data calculation conducted in CSV file and saved into XLSX file. Files inputted into D3 Javascript file. Data visualized into interactive D3 bar chart using this tutorial: https://blog.risingstack.com/d3-js-tutorial-bar-charts-with-javascript/. Attempted to overlay a line chart to show under-valued or over-valued. Difficult to implement. Work in progress.
 
 ----------------------------------------------------------------------------
 FISCAL
