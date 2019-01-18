@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Fiscal Policy </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="styles/federal-style.css" rel="stylesheet" type = "text/css">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="https://hgelfond.github.io/b1-economic-policy/index.html"> Economic Policy: A Project for DPI-69 </a>
+		</div>
+		<li><a href="https://hgelfond.github.io/b1-economic-policy/index.html">Home</a></li>
+		<li><a href="https://hgelfond.github.io/b1-economic-policy/income-inequality.html">Income Inequality</a>
+		</li>
+		<li> <a href="https://hgelfond.github.io/b1-economic-policy/asset-valuation.html">Asset Valuation </a></li>
+		<li><a href="https://hgelfond.github.io/b1-economic-policy/fiscal.html">Fiscal Policy </a></li>
+	</div>
+</nav>
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>Fiscal Policy</h1>
+<!-- 		<h2>Sub-heading</h2>
+		<br>
+		<img src="#" width="800" height="400" alt="#">
+		<br>
+		<p> Data Source: <a href="#"></a></p> -->
+		
+		<br>
+		<br>
+	</div>	
+</div>
+<div class="container">
+	<div class="column">
+		<div class="row-md-12"></div>
+		<h1><strong>In order to be able to successfully respond to economic problems such as income inequality, the federal government must addresss its fiscal shortfall. </strong><br><br></h1>
+	</div>
+</div>
+<div class="container">
+	<div class="column">
+		<div class="row-md-12"></div>
+			<p>The federal government is primarily funded through individual income taxes, payroll taxes and corporate taxes. In 2018, federal revenue totaled 16.6 percent of GDP. </p>
+
+			<p>Federal spending is composed of mandatory spending, which is written into law, and discretionary spending, which must be re-appropriated each year. Mandatory spending funds some of the largest government programs: Social Security, Medicare and Medicaid. Defense spending is part of the discretionary budget. Non-defense discretionary spending includes all other functions of government you may be familiar with. Federal spending totaled 20.6 percent of GDP in 2018.</p>
+			<br>
+			<h2> The current fiscal status: expenditures exceed revenue. </h2>
+
+			<div class="row">
+			<!--   <div class="column">
+			  	<img src = "spending.png" style="width:500px;height:300px;"></div>
+			 --><!-- <div class="column">
+				<img src = "revenue.png" style="width:500px;height:300px;"></div>
+			</div>
+			 --><br>
+			<div id = "revenue" width="200" height="700"></div>
+			<div id = "spending" width="200" height="900"></div>
+			<br>
+			<div>
+			<p> Data Source:
+			<a href = "https://www.cbo.gov/publication/54318">
+			Congressional Budget Office (2018).</a> </p>
+			<p> D3 Source: 
+			<a href ="http://bl.ocks.org/mstanaland/6100713">http://bl.ocks.org/mstanaland/6100713</a></div>
+
+		<div class="row-md-12"></div>
+
+			 <h2> Rising debt will constrain economic growth and policy responses to income inequality
+			 <br>...Especially after accounting for the effects of the new tax law.</h2>
+
+			 <p>Notice that federal spending exceeds federal revenues - the extent to which this occurs is called the deficit. In 2018, the federal deficit was 3.9 percent of GDP. The compounding of annual deficits and interest payments generates estimates of the federal debt.</p>
+
+			 <h2> Federal debt as a share of GDP has increased steadily over time and is projected to continue its upward ascent.</h2>
+			 <div id="cboChart" width="1000" height="700"></div>
+			 <br>
+			 <p1> Data Source: <a href="https://www.cbo.gov/publication/54318">Congressional Budget Office (2018).</a></p>
+			 <p1> D3 Source: <a href = "https://bl.ocks.org/mbostock/3902569">https://bl.ocks.org/mbostock/3902569 </a></p1><br>
+			 <br>
+		
+		<div class="row-md-12"></div>
+
+
+<!--<International perspective chart> -->
+			 <h2>How does United States debt compare to other G7 countries? (Canada, France, Germany, Italy, Japan and the United Kingdom) </h2>
+
+			 <h2>US debt to GDP ranks XXX among t</h2>  
+			 <div id="sliderChart" width="800" height="700"></div>
+			 <p>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p>
+			 <br>
+			 </p>
+			 </div>
+			 </div>
+			 <h2>Debt to GDP Ratio of G7+3 countries</h2>
+			 <p>General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. </p>
+
+			 <p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
+	</div>
+</div>
+<br>
+<br>
+
+<script src="https://d3js.org/d3.v3.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- revenue and spending charts -->
+<script src="scripts/revenue.js"></script>
+<script src = "scripts/spending.js"></script>
+
+
+<!--<script for debt chart> -->
+<script src= "scripts/debt.js"> </script>
+
+
+<!--<script for international debt chart> -->
+<script src= "scripts/international-main.js"> </script>
+
+
+</body>
+
+<footer>
+    <div class="container-fluid text-center text-md-left">
+    <div class="footer">
+    DPI-691: Programming and Data for Policymakers, Harvard Kennedy School. Last Updated: 01-14-2019
+  </div>
+</div>
+</footer>
+
+</html>
+
