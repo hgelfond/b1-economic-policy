@@ -245,6 +245,65 @@ stroke: none;
   padding-bottom: 0;
 }
 
+<<<<<<< HEAD
+#caption h1, p {
+  text-align: center;
+}
+
+div#layout {
+  text-align: center;
+}
+
+
+.bar {
+  fill: #80cbc4;
+}
+
+text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: red;
+}
+
+line#limit {
+  stroke-width: 3;
+  stroke-dasharray: 50;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+text.divergence {
+  font-size: 14px;
+  fill: #2F4A6D;
+}
+
+text.value {
+  font-size: 14px;
+}
+
+text.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+text.label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+text.source {
+  font-size: 10px;
+}
+=======
 .team-member {
   margin-bottom:50px;
   text-align:center;
@@ -396,3 +455,4 @@ stroke: none;
 
 
 
+>>>>>>> 141bbb9c641cd5a0b54383b39a0d8199fb9c27ac
