@@ -115,6 +115,7 @@
     svg.attr('height', 600 + 80)
     	.attr('width', 1000);
 
+
 	const chart = svg.append('g')
     .attr('transform', `translate(${margin}, ${margin})`);
 
@@ -137,7 +138,7 @@
     	.style('text-anchor', 'end')
     	.attr('dx', '-.8em')
     	.attr('dy', '.15em')
-    	.attr('transform', 'rotate(-65)');
+    	.attr('transform', 'rotate(-55)');
 
     const barGroups = chart.selectAll()
     .data(sample)
@@ -225,7 +226,7 @@
 // Line Data categories
     avg_pe_since_2000.value = "line";
 
-// drawaing lines
+// drawing lines
     svg.selectAll(".lines").data(lineData).enter().append("g").attr("class", "line")
     .each(function (d) {
         Name=d[0].Name
