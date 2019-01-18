@@ -1,3 +1,55 @@
+/* Nav Bar Styling */
+
+.navbar-inverse {
+  background: #2E2F31;
+  border: 0;
+}
+
+.navbar a {
+  margin-bottom: 0;
+  color: white;
+}
+
+/*JUMBOTRON STYLES*/
+
+.jumbotron {
+  background: #98C1D9;
+  color: black;
+  text-align: center;
+  padding-top: 1;
+  padding-bottom: 0;
+}
+
+.container h2 {
+  font-size: 24px;
+}
+
+.container h1 {
+  font-weight: bold;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2E2F31;
+  color: white;
+  text-align: center;
+}
+
+img svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/*GENERAL BODY FORMATTING*/
+
+h1, p {
+  padding-left: 2px
+  padding-right: 2px;
+}
+
+/* D3 Graphic Styling */
 body {
   font-family: 'Open Sans', sans-serif;
 }
