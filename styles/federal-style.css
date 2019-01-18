@@ -132,7 +132,6 @@ font: 14px sans-serif;
 shape-rendering: crispEdges;
 }
 
-
 #revenue .axis path,
 #revenue .axis line, #spending .axis path, #spending .axis line {
 fill: none;
@@ -148,7 +147,6 @@ stroke: none;
 }
 
 /*slider chart styling*/
-
 
 #sliderChart text {
   font-size: 10px;
@@ -341,7 +339,46 @@ text.source {
 
 #facts tr:hover {background-color: #ddd;}
 
-/*Inequality chart*/
+/*WORLD MAP at Index.html*/
+
+#worldmap body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+  height: 500px;
+  position: relative;
+}
+
+
+#worldmap .land {
+  fill: #222;
+}
+
+#worldmap .boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+#worldmap-tooltip {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+
+#worldmap-tooltip .tooltip_key {
+  font-weight: bold;
+}
+
+#worldmap-tooltip .tooltip_value {
+  margin-left: 20px;
+  float: right;
+}
+
+
+/*Inequality chart
 .chart-wrapper {
     max-width: 950px;
     min-width: 304px;
@@ -447,43 +484,4 @@ text.source {
 @media (max-width:500px){
     .chart-wrapper .line {stroke-width: 3px;}
     .chart-wrapper .legend {font-size: 14px;}
-}
-
-/*WORLD MAP at Index.html*/
-
-
-#worldmap body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  width: 960px;
-  height: 500px;
-  position: relative;
-}
-
-
-#worldmap .land {
-  fill: #222;
-}
-
-#worldmap .boundary {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 1px;
-}
-
-#worldmap-tooltip {
-  position: absolute;
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
-  border: 1px solid;
-  display: none;
-}
-
-#worldmap-tooltip .tooltip_key {
-  font-weight: bold;
-}
-
-#worldmap-tooltip .tooltip_value {
-  margin-left: 20px;
-  float: right;
-}
+}*/
