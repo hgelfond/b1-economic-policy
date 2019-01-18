@@ -202,3 +202,13 @@ text.source {
 #facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
 
 #facts tr:hover {background-color: #ddd;}
+
+#theil-viz {
+  width: 800px;
+  height: 1000px;
+}
+
+#d3plus {
+  height: 1000px;
+  
+}

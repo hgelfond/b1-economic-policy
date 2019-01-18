@@ -2,7 +2,7 @@
  d3.json("/data/theil-elements.json", function(theilElements)) {
   // instantiate d3plus
    var visualization = d3plus.viz()
-    .container("#viz")  // container DIV to hold the visualization
+    .container("#theil-viz")  // container DIV to hold the visualization
     .data(theilElements)  // data to use with the visualization
     .type("stacked")    // visualization type
     .id("variables")         // key for which our data is unique on
