@@ -15,7 +15,7 @@
             .controlLabels({stacked: "Stacked"})
             .duration(300);
 
-            // chart.xAxis.tickFormat(function(d) { return d3.time.format('%x')(new Date(d)) });
+            chart.xAxis.tickFormat(function(d) { return d3.time.format('%x')(new Date(d)) });
             chart.yAxis.tickFormat(d3.format(',.4f'));
 
             chart.legend.vers('furious');
@@ -26,7 +26,7 @@
             .call(chart)
             .each('start', function() {
                 setTimeout(function() {
-                    d3.selectAll('#chart1 *').each(function() {
+                    d3.selectAll('#theil-elements').each(function() {
                         if(this.__transition__)
                             this.__transition__.duration = 1;
                     })

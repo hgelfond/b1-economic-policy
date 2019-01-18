@@ -13,7 +13,7 @@
 <nav class="navbar navbar-inverse navbar-static-top">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="https://hgelfond.github.io/b1-economic-policy/index.html"> Economic Policy: A Project for DPI-69 </a>
+			<a class="navbar-brand" href="https://hgelfond.github.io/b1-economic-policy/index.html"> Economic Policy: A Project for DPI-691 </a>
 		</div>
 		<li><a href="https://hgelfond.github.io/b1-economic-policy/index.html">Home</a></li>
 		<li><a href="https://hgelfond.github.io/b1-economic-policy/income-inequality.html">Income Inequality</a>
@@ -26,12 +26,6 @@
 <div class="jumbotron">
 	<div class="container">
 		<h1>Income Inequality</h1>
-		<!-- <h2>Sub-heading</h2>
-		<br>
-		<img src="#" width="800" height="400" alt="#">
-		<br>
-		<p> Data Source: <a href="#"></a></p> -->
-		
 		<br>
 	</div>	
 </div>
@@ -45,10 +39,10 @@
 		<!-- <div class="chart-wrapper" id="chart-line1"></div> -->
 
 			<img src = "images/inequality.png" style="width:800px;height:500px;" align = "center">
-			<p>  Data Source: <a href = "http://gabriel-zucman.eu/files/PSZ2018QJE.pdf">Thomas Picketty, Emmanuel Saez and Gabriel Zucman (2018).</a></center></p>
+			<p><center/>  Data Source: <a href = "http://gabriel-zucman.eu/files/PSZ2018QJE.pdf">Thomas Picketty, Emmanuel Saez and Gabriel Zucman (2018).</a></center></p>
 			<br>
 
-			<h2><center>Some Quick Facts About Economic Wellbeing in the US</h2></div>
+<!-- 			<h2><center>Some Quick Facts About Economic Wellbeing in the US</h2></div>
 			<div> <center>
 			<table id = "facts" cellspacing="1" border = "1" align = "center">
 				<tr align = "center">
@@ -71,45 +65,54 @@
 					<th>Unemployment Rate</th>
 					<td>3.9 percent</td>
 				</tr>
-
-			</table>
-
-
-			<p center>Source: <a href = "https://www.census.gov/quickfacts/fact/table/US/PST045218"> US Census Bureau (2019);</a> <a href = "https://www.bls.gov/news.release/pdf/empsit.pdf"> US Bureau of Labor Statistics.</a></p>
-			</div>
-			<br>
+			</table></center></div>
+		<div class="row-md-12"></div>
+			<p>Source: <a href = "https://www.census.gov/quickfacts/fact/table/US/PST045218"> US Census Bureau (2019);</a> <a href = "https://www.bls.gov/news.release/pdf/empsit.pdf"> US Bureau of Labor Statistics.</a></p><br> -->
+		<div class="row-md-12"></div>
 			<h2> Lifelong Consequences of Inequality</h2>
 			<p> One consequence of inequality is a decline in absolute economic mobility, the likelihood that a child will earn more than their parents. Economists <a href = "https://opportunityinsights.org/wp-content/uploads/2018/03/abs_mobility_paper.pdf"> Raj Chetty, David Grusky, Maximilian Hell, Nathaniel Hendren and Jimmy Nrang</a> study how mobility in the United States has changed over time. See the chart below to compare your state to the national average.</p>
 	</div>
 </div>
-
-
-<div id = "mobility">
-	<div id = "mobility40">
-	<p><strong><center>Across the United States, absolute income mobility has declined <br>from about 90 percent for children born in 1940 </center></strong></p>
-		<div id="tooltip-container40" style="display:none; top: 350px; left:182px;"></div>
-		<div id="canvas-svg40"></div>
-	</div>
-	<div id = "mobility80">
-	<p><strong><center>...to about 50 percent for those born in 1980.</center></strong></p>
-		<div id="tooltip-container80" style="display:none; top: 350px; left:182px;"></div>
-		<div id="canvas-svg80"></div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div id = "mobility">
+				<div id = "mobility40">
+				<p><strong><center>Across the United States, absolute income mobility has declined <br>from about 90 percent for children born in 1940 </center></strong></p>
+					<div id="tooltip-container40" style="display:none; top: 350px; left:182px;"></div>
+					<div id="canvas-svg40" style = "width: 400px; height: 300px"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div id = "mobility">
+				<div id = "mobility80">
+				<p><strong><center>...to about 50 percent for those born in 1980.</center></strong></br><br></p>
+					<div id="tooltip-container80" style="display:none; top: 350px; left:182px;"></div>
+					<div id="canvas-svg80" style= "width: 400px; height: 300px"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-
+	<br>
+	<p><center>Data Source: <a href = "https://opportunityinsights.org/wp-content/uploads/2018/03/abs_mobility_paper.pdf"> Raj Chetty, David Grusky, Maximilian Hell, Nathaniel Hendren and Jimmy Nrang (2016). </a><br>
+	D3 Source: <a href = "https://bl.ocks.org/dnprock/5215cc464cfb9affd283">https://bl.ocks.org/dnprock/5215cc464cfb9affd283</a></p>
+	</div>
+</div>
+</div>
 <div class="container">
 	<div class="column">
 	  <div class="row-md-12"></div>
 	  	<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
-		<h1>NYC Wage Inequality</h1>
-		<h2>Theil's T</p>
-		<br>
-		<img src="theil_index.png" width="600" height="400" alt="Theil Index" class="center">
-		<br>
-		<p> Data Source: <a href="https://www.manhattan-institute.org/sites/default/files/IB-AA-1017.pdf">Manhattan Institute</a></p>
-		</div>	
-		<h3>Wage Inequality</h3>
-		<p> The chart above shows the evolution of intersectoral wage inequality in the five boroughs in recent years. Mayor Bill de Blasio ran on a platform of ending the "Tale of Two Cities" in New York. Sympathizers and critics alike, however, note that local income inequality is not a direct operating variable of city government. The city's booming economy and status as a global "superstar city" make it all the harder to balance political interests in equity and growth.  </p>
+			<h1>NYC Wage Inequality</h1>
+			<h2>Theil's T</p>
+			<br>
+			<img src="theil_index.png" width="600" height="400" alt="Theil Index" class="center">
+			<br>
+			<p> Data Source: <a href="https://www.manhattan-institute.org/sites/default/files/IB-AA-1017.pdf">Manhattan Institute</a></p>
+			</div>	
+			<h3>Wage Inequality</h3>
+			<p> The chart above shows the evolution of intersectoral wage inequality in the five boroughs in recent years. Mayor Bill de Blasio ran on a platform of ending the "Tale of Two Cities" in New York. Sympathizers and critics alike, however, note that local income inequality is not a direct operating variable of city government. The city's booming economy and status as a global "superstar city" make it all the harder to balance political interests in equity and growth.  </p>
 	</div>
 </div>
 
@@ -137,7 +140,7 @@
 <footer>
     <div class="container-fluid text-center text-md-left">
     <div class="footer">
-    DPI-691: Programming and Data for Policymakers, Harvard Kennedy School. Last Updated: 01-14-2019
+    DPI-691: Programming and Data for Policymakers, Harvard Kennedy School. Last Updated: 01-18-2019
   </div>
 </div>
 </footer>

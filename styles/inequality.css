@@ -65,10 +65,10 @@ h1, p {
   fill: #ccc;
 }
 
-#mobility40 .states-choropleth, #mobility80 .states-choropleth {
+/*#mobility40 .states-choropleth, #mobility80 .states-choropleth {
   fill: #ccc;
 }
-
+*/
 #tooltip-container40, #tooltip-container80 {
   position: absolute;
   background-color: #fff;
@@ -107,11 +107,11 @@ h1, p {
 }
 
 #caption h1, p {
-  text-align: center;
+  text-align: left;
 }
 
 div#layout {
-  text-align: center;
+  text-align: left;
 }
 
 

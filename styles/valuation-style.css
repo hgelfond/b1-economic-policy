@@ -14,15 +14,6 @@
   font-size: 16px;
 }
 /*JUMBOTRON STYLES*/
-
-.container h2 {
-  font-size: 24px;
-}
-
-.container h1 {
-  font-weight: bold;
-}
-
 .footer {
   left: 0;
   bottom: 0;
@@ -117,28 +108,6 @@ text.source {
   font-size: 10px;
 }
 
-.team-member {
-  margin-bottom:50px;
-  text-align:center;
-  img {
-    width: 225px;
-    height: 225px;
-    border:7px solid $white;
-  }
-  
-  h4 {
-    margin-top:25px;  
-    margin-bottom:0px;
-    text-align:center;
-    text-transform:none;
-  }
-  p{
-    margin-top:0;
-  }
-.navbar-inverse {
-  background: #2E2F31;
-  border: 0;
-}
 
 /* D3 Graphic Styling */
 body {
@@ -149,8 +118,9 @@ div#layout {
   text-align: center;
 }
 
-div#container {
+div#graphic {
   background-color: #2F4A6D;
+  color: white;
 }
 
 

@@ -1,0 +1,199 @@
+variables,year,data
+"All Other",2000,-.17913801
+"All Other",2001,-.17991489
+"All Other",2002,-.16472402
+"All Other",2003,-.15752891
+"All Other",2004,-.16907886
+"All Other",2005,-.17486072
+"All Other",2006,-.18734001
+"All Other",2007,-.19847452
+"All Other",2008,-.19455316
+"All Other",2009,-.17136477
+"All Other",2010,-.18144894
+"All Other",2011,-.18387354
+"All Other",2012,-.17868769
+"All Other",2013,-.18081416
+"All Other",2014,-.18394706
+"All Other",2015,-.17912936
+"All Other",2016,-.17363024
+"All Other",2017,-.18080449
+"NAICS 511 Publishing Industries",2000,.00765043
+"NAICS 511 Publishing Industries",2001,.00931464
+"NAICS 511 Publishing Industries",2002,.00739695
+"NAICS 511 Publishing Industries",2003,.00875282
+"NAICS 511 Publishing Industries",2004,.00720934
+"NAICS 511 Publishing Industries",2005,.00746097
+"NAICS 511 Publishing Industries",2006,.00641965
+"NAICS 511 Publishing Industries",2007,.0051885
+"NAICS 511 Publishing Industries",2008,.00649494
+"NAICS 511 Publishing Industries",2009,.00682719
+"NAICS 511 Publishing Industries",2010,.00569057
+"NAICS 511 Publishing Industries",2011,.00609112
+"NAICS 511 Publishing Industries",2012,.00655025
+"NAICS 511 Publishing Industries",2013,.00705691
+"NAICS 511 Publishing Industries",2014,.00715743
+"NAICS 511 Publishing Industries",2015,.00680694
+"NAICS 511 Publishing Industries",2016,.00623576
+"NAICS 511 Publishing Industries",2017,.00585738
+"NAICS 515 Broadcasting (except Internet)",2000,.00374418
+"NAICS 515 Broadcasting (except Internet)",2001,.00407784
+"NAICS 515 Broadcasting (except Internet)",2002,.00450826
+"NAICS 515 Broadcasting (except Internet)",2003,.00473062
+"NAICS 515 Broadcasting (except Internet)",2004,.00512913
+"NAICS 515 Broadcasting (except Internet)",2005,.00454565
+"NAICS 515 Broadcasting (except Internet)",2006,.00446392
+"NAICS 515 Broadcasting (except Internet)",2007,.00324188
+"NAICS 515 Broadcasting (except Internet)",2008,.00405372
+"NAICS 515 Broadcasting (except Internet)",2009,.00591384
+"NAICS 515 Broadcasting (except Internet)",2010,.00526668
+"NAICS 515 Broadcasting (except Internet)",2011,.00574031
+"NAICS 515 Broadcasting (except Internet)",2012,.00749804
+"NAICS 515 Broadcasting (except Internet)",2013,.00832887
+"NAICS 515 Broadcasting (except Internet)",2014,.00841937
+"NAICS 515 Broadcasting (except Internet)",2015,.0076919
+"NAICS 515 Broadcasting (except Internet)",2016,.00705719
+"NAICS 515 Broadcasting (except Internet)",2017,.00722153
+"NAICS 517 Telecommunications",2000,.00205259
+"NAICS 517 Telecommunications",2001,.00181118
+"NAICS 517 Telecommunications",2002,.00244545
+"NAICS 517 Telecommunications",2003,.00316752
+"NAICS 517 Telecommunications",2004,.00172785
+"NAICS 517 Telecommunications",2005,.00174932
+"NAICS 517 Telecommunications",2006,.00176687
+"NAICS 517 Telecommunications",2007,.00101448
+"NAICS 517 Telecommunications",2008,.00094374
+"NAICS 517 Telecommunications",2009,.00169633
+"NAICS 517 Telecommunications",2010,.00193622
+"NAICS 517 Telecommunications",2011,.00203913
+"NAICS 517 Telecommunications",2012,.00147162
+"NAICS 517 Telecommunications",2013,.00179149
+"NAICS 517 Telecommunications",2014,.00135614
+"NAICS 517 Telecommunications",2015,.00243892
+"NAICS 517 Telecommunications",2016,.00326362
+"NAICS 517 Telecommunications",2017,.002233
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2000,.00140825
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2001,.00122265
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2002,.00111604
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2003,.00117297
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2004,.0010515
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2005,.00127239
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2006,.00094083
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2007,.00142333
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2008,.00116833
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2009,.00088919
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2010,.00093313
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2011,.00073311
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2012,.00091644
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2013,.00114476
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2014,.00168561
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2015,.00347125
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2016,.00231471
+"NAICS 518 ISPs, Search Portals, & Data Processing	",2017,.00247584
+"NAICS 519 Other Information Services",2000,-.00082581
+"NAICS 519 Other Information Services",2001,-.00085286
+"NAICS 519 Other Information Services",2002,-.00080319
+"NAICS 519 Other Information Services",2003,-.00072702
+"NAICS 519 Other Information Services",2004,-.00042553
+"NAICS 519 Other Information Services",2005,-.00048658
+"NAICS 519 Other Information Services",2006,-.00045383
+"NAICS 519 Other Information Services",2007,-.0000941
+"NAICS 519 Other Information Services",2008,.00027508
+"NAICS 519 Other Information Services",2009,.00064076
+"NAICS 519 Other Information Services",2010,.00197821
+"NAICS 519 Other Information Services",2011,.00291913
+"NAICS 519 Other Information Services",2012,.00384189
+"NAICS 519 Other Information Services",2013,.00537288
+"NAICS 519 Other Information Services",2014,.00645147
+"NAICS 519 Other Information Services",2015,.00786676
+"NAICS 519 Other Information Services",2016,.01014175
+"NAICS 519 Other Information Services",2017,.01140023
+"NAICS 522 Credit Intermediation & Related Activity",2000,.028942
+"NAICS 522 Credit Intermediation & Related Activity",2001,.03020533
+"NAICS 522 Credit Intermediation & Related Activity",2002,.02736229
+"NAICS 522 Credit Intermediation & Related Activity",2003,.02841501
+"NAICS 522 Credit Intermediation & Related Activity",2004,.02914217
+"NAICS 522 Credit Intermediation & Related Activity",2005,.02721012
+"NAICS 522 Credit Intermediation & Related Activity",2006,.03481747
+"NAICS 522 Credit Intermediation & Related Activity",2007,.03790444
+"NAICS 522 Credit Intermediation & Related Activity",2008,.03263645
+"NAICS 522 Credit Intermediation & Related Activity",2009,.03088953
+"NAICS 522 Credit Intermediation & Related Activity",2010,.03288573
+"NAICS 522 Credit Intermediation & Related Activity",2011,.03896798
+"NAICS 522 Credit Intermediation & Related Activity",2012,.03668457
+"NAICS 522 Credit Intermediation & Related Activity",2013,.04126375
+"NAICS 522 Credit Intermediation & Related Activity",2014,.04114619
+"NAICS 522 Credit Intermediation & Related Activity",2015,.03994397
+"NAICS 522 Credit Intermediation & Related Activity",2016,.03733716
+"NAICS 522 Credit Intermediation & Related Activity",2017,.0392947
+"NAICS 523 Financial Investment & Related Activity",2000,.30512432
+"NAICS 523 Financial Investment & Related Activity",2001,.30537466
+"NAICS 523 Financial Investment & Related Activity",2002,.24630629
+"NAICS 523 Financial Investment & Related Activity",2003,.22906499
+"NAICS 523 Financial Investment & Related Activity",2004,.27853007
+"NAICS 523 Financial Investment & Related Activity",2005,.29979629
+"NAICS 523 Financial Investment & Related Activity",2006,.35329405
+"NAICS 523 Financial Investment & Related Activity",2007,.40848298
+"NAICS 523 Financial Investment & Related Activity",2008,.38567957
+"NAICS 523 Financial Investment & Related Activity",2009,.28042076
+"NAICS 523 Financial Investment & Related Activity",2010,.3195833
+"NAICS 523 Financial Investment & Related Activity",2011,.31364564
+"NAICS 523 Financial Investment & Related Activity",2012,.29441033
+"NAICS 523 Financial Investment & Related Activity",2013,.2794721
+"NAICS 523 Financial Investment & Related Activity",2014,.31129819
+"NAICS 523 Financial Investment & Related Activity",2015,.283197
+"NAICS 523 Financial Investment & Related Activity",2016,.26707805
+"NAICS 523 Financial Investment & Related Activity",2017,.29581352
+"NAICS 524 Insurance Carriers & Related Activities",2000,.01005252
+"NAICS 524 Insurance Carriers & Related Activities",2001,.01244313
+"NAICS 524 Insurance Carriers & Related Activities",2002,.01241742
+"NAICS 524 Insurance Carriers & Related Activities",2003,.01369697
+"NAICS 524 Insurance Carriers & Related Activities",2004,.01424763
+"NAICS 524 Insurance Carriers & Related Activities",2005,.01434902
+"NAICS 524 Insurance Carriers & Related Activities",2006,.01248225
+"NAICS 524 Insurance Carriers & Related Activities",2007,.01226632
+"NAICS 524 Insurance Carriers & Related Activities",2008,.01213126
+"NAICS 524 Insurance Carriers & Related Activities",2009,.01472059
+"NAICS 524 Insurance Carriers & Related Activities",2010,.01300704
+"NAICS 524 Insurance Carriers & Related Activities",2011,.01427972
+"NAICS 524 Insurance Carriers & Related Activities",2012,.01533099
+"NAICS 524 Insurance Carriers & Related Activities",2013,.01570359
+"NAICS 524 Insurance Carriers & Related Activities",2014,.01550631
+"NAICS 524 Insurance Carriers & Related Activities",2015,.01519275
+"NAICS 524 Insurance Carriers & Related Activities",2016,.0155157
+"NAICS 524 Insurance Carriers & Related Activities",2017,.01413656
+"NAICS 541 Professional and Technical Services",2000,.03553646
+"NAICS 541 Professional and Technical Services",2001,.03409832
+"NAICS 541 Professional and Technical Services",2002,.03722286
+"NAICS 541 Professional and Technical Services",2003,.03882468
+"NAICS 541 Professional and Technical Services",2004,.03697722
+"NAICS 541 Professional and Technical Services",2005,.0379884
+"NAICS 541 Professional and Technical Services",2006,.03314425
+"NAICS 541 Professional and Technical Services",2007,.02957085
+"NAICS 541 Professional and Technical Services",2008,.03436279
+"NAICS 541 Professional and Technical Services",2009,.04375084
+"NAICS 541 Professional and Technical Services",2010,.04126667
+"NAICS 541 Professional and Technical Services",2011,.04331194
+"NAICS 541 Professional and Technical Services",2012,.04626092
+"NAICS 541 Professional and Technical Services",2013,.04841514
+"NAICS 541 Professional and Technical Services",2014,.04798156
+"NAICS 541 Professional and Technical Services",2015,.05151228
+"NAICS 541 Professional and Technical Services",2016,.05553115
+"NAICS 541 Professional and Technical Services",2017,.05084679
+"NAICS 551 Management of Companies and Enterprises",2000,.03300857
+"NAICS 551 Management of Companies and Enterprises",2001,.03062037
+"NAICS 551 Management of Companies and Enterprises",2002,.0412879
+"NAICS 551 Management of Companies and Enterprises",2003,.03292196
+"NAICS 551 Management of Companies and Enterprises",2004,.03098103
+"NAICS 551 Management of Companies and Enterprises",2005,.03094617
+"NAICS 551 Management of Companies and Enterprises",2006,.02910245
+"NAICS 551 Management of Companies and Enterprises",2007,.03122346
+"NAICS 551 Management of Companies and Enterprises",2008,.02899446
+"NAICS 551 Management of Companies and Enterprises",2009,.02541551
+"NAICS 551 Management of Companies and Enterprises",2010,.03543892
+"NAICS 551 Management of Companies and Enterprises",2011,.03484755
+"NAICS 551 Management of Companies and Enterprises",2012,.03485367
+"NAICS 551 Management of Companies and Enterprises",2013,.03345599
+"NAICS 551 Management of Companies and Enterprises",2014,.03116097
+"NAICS 551 Management of Companies and Enterprises",2015,.03010374
+"NAICS 551 Management of Companies and Enterprises",2016,.02500301
+"NAICS 551 Management of Companies and Enterprises",2017,.02490107

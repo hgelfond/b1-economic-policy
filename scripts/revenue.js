@@ -1,7 +1,7 @@
 (function(){
-  var margin = {top: 20, right: 160, bottom: 35, left: 30};
+  var margin = {top: 40, right: 160, bottom: 35, left: 30};
 
-  var width = 450 - margin.left - margin.right,
+  var width = 350 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
   var svg = d3.select("div#revenue")
@@ -73,13 +73,17 @@
     .data(function(d) { return d; })
     .enter()
     .append("rect")
-    .attr("x", function(d) { return x(d.x); })
-    .attr("y", function(d) { return y(d.y0 + d.y); })
-    .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
-    .attr("width", x.rangeBand())
-    .on("mouseover", function() { tooltip.style("display", null); })
-    .on("mouseout", function() { tooltip.style("display", "none"); })
-    .on("mousemove", function(d) {
+      .attr("x", function(d) { return x(d.x); })
+      .attr("y", function(d) { return y(d.y0 + d.y); })
+      .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
+      .attr("width", x.rangeBand())
+    .on("mouseover", function(){ 
+      tooltip.style("display", null); 
+    })
+    .on("mouseout", function(){ 
+      tooltip.style("display", "none"); 
+    })
+    .on("mousemove", function(d){
       var xPosition = d3.mouse(this)[0] - 15;
       var yPosition = d3.mouse(this)[1] - 25;
       tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
@@ -110,21 +114,22 @@
         case 0: return "Other";
         case 1: return "Corporate Tax";
         case 2: return "Payroll Tax";
-        case 3: return "Individual Income Tax";
+        case 3: return "Indiv. Income Tax";
       }
     });
 
-
   // Prep the tooltip bits, initial display is hidden
   var tooltip = svg.append("g")
-    .attr("class", "tooltip")
+    .attr("class", "fisc-tooltip")
     .style("display", "none")
+    .attr("id", "revenue")
       
   tooltip.append("rect")
     .attr("width", 30)
     .attr("height", 20)
     .attr("fill", "white")
     .style("opacity", 1)
+    .attr("id", "revenue")
 
   tooltip.append("text")
     .attr("x", 15)
@@ -132,4 +137,5 @@
     .style("text-anchor", "middle")
     .attr("font-size", "14px")
     .attr("font-weight", "bold")
+    .attr("id", "revenue")
 })();
