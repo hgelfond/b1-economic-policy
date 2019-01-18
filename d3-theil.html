@@ -1,0 +1,1018 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<!-- load D3js -->
+<script src="//d3plus.org/js/d3.js"></script>
+
+<!-- load D3plus after D3js -->
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<!-- create container element for visualization -->
+<div id="viz"></div>
+
+<script>
+  // sample data array
+  var sample_data = [
+ {
+   "variables": "All Other",
+   "year": 2000,
+   "data": -0.17913801
+ },
+ {
+   "variables": "All Other",
+   "year": 2001,
+   "data": -0.17991489
+ },
+ {
+   "variables": "All Other",
+   "year": 2002,
+   "data": -0.16472402
+ },
+ {
+   "variables": "All Other",
+   "year": 2003,
+   "data": -0.15752891
+ },
+ {
+   "variables": "All Other",
+   "year": 2004,
+   "data": -0.16907886
+ },
+ {
+   "variables": "All Other",
+   "year": 2005,
+   "data": -0.17486072
+ },
+ {
+   "variables": "All Other",
+   "year": 2006,
+   "data": -0.18734001
+ },
+ {
+   "variables": "All Other",
+   "year": 2007,
+   "data": -0.19847452
+ },
+ {
+   "variables": "All Other",
+   "year": 2008,
+   "data": -0.19455316
+ },
+ {
+   "variables": "All Other",
+   "year": 2009,
+   "data": -0.17136477
+ },
+ {
+   "variables": "All Other",
+   "year": 2010,
+   "data": -0.18144894
+ },
+ {
+   "variables": "All Other",
+   "year": 2011,
+   "data": -0.18387354
+ },
+ {
+   "variables": "All Other",
+   "year": 2012,
+   "data": -0.17868769
+ },
+ {
+   "variables": "All Other",
+   "year": 2013,
+   "data": -0.18081416
+ },
+ {
+   "variables": "All Other",
+   "year": 2014,
+   "data": -0.18394706
+ },
+ {
+   "variables": "All Other",
+   "year": 2015,
+   "data": -0.17912936
+ },
+ {
+   "variables": "All Other",
+   "year": 2016,
+   "data": -0.17363024
+ },
+ {
+   "variables": "All Other",
+   "year": 2017,
+   "data": -0.18080449
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2000,
+   "data": 0.00765043
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2001,
+   "data": 0.00931464
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2002,
+   "data": 0.00739695
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2003,
+   "data": 0.00875282
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2004,
+   "data": 0.00720934
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2005,
+   "data": 0.00746097
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2006,
+   "data": 0.00641965
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2007,
+   "data": 0.0051885
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2008,
+   "data": 0.00649494
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2009,
+   "data": 0.00682719
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2010,
+   "data": 0.00569057
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2011,
+   "data": 0.00609112
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2012,
+   "data": 0.00655025
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2013,
+   "data": 0.00705691
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2014,
+   "data": 0.00715743
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2015,
+   "data": 0.00680694
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2016,
+   "data": 0.00623576
+ },
+ {
+   "variables": "NAICS 511 Publishing Industries",
+   "year": 2017,
+   "data": 0.00585738
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2000,
+   "data": 0.00374418
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2001,
+   "data": 0.00407784
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2002,
+   "data": 0.00450826
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2003,
+   "data": 0.00473062
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2004,
+   "data": 0.00512913
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2005,
+   "data": 0.00454565
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2006,
+   "data": 0.00446392
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2007,
+   "data": 0.00324188
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2008,
+   "data": 0.00405372
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2009,
+   "data": 0.00591384
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2010,
+   "data": 0.00526668
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2011,
+   "data": 0.00574031
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2012,
+   "data": 0.00749804
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2013,
+   "data": 0.00832887
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2014,
+   "data": 0.00841937
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2015,
+   "data": 0.0076919
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2016,
+   "data": 0.00705719
+ },
+ {
+   "variables": "NAICS 515 Broadcasting (except Internet)",
+   "year": 2017,
+   "data": 0.00722153
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2000,
+   "data": 0.00205259
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2001,
+   "data": 0.00181118
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2002,
+   "data": 0.00244545
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2003,
+   "data": 0.00316752
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2004,
+   "data": 0.00172785
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2005,
+   "data": 0.00174932
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2006,
+   "data": 0.00176687
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2007,
+   "data": 0.00101448
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2008,
+   "data": 0.00094374
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2009,
+   "data": 0.00169633
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2010,
+   "data": 0.00193622
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2011,
+   "data": 0.00203913
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2012,
+   "data": 0.00147162
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2013,
+   "data": 0.00179149
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2014,
+   "data": 0.00135614
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2015,
+   "data": 0.00243892
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2016,
+   "data": 0.00326362
+ },
+ {
+   "variables": "NAICS 517 Telecommunications",
+   "year": 2017,
+   "data": 0.002233
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2000,
+   "data": 0.00140825
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2001,
+   "data": 0.00122265
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2002,
+   "data": 0.00111604
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2003,
+   "data": 0.00117297
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2004,
+   "data": 0.0010515
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2005,
+   "data": 0.00127239
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2006,
+   "data": 0.00094083
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2007,
+   "data": 0.00142333
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2008,
+   "data": 0.00116833
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2009,
+   "data": 0.00088919
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2010,
+   "data": 0.00093313
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2011,
+   "data": 0.00073311
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2012,
+   "data": 0.00091644
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2013,
+   "data": 0.00114476
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2014,
+   "data": 0.00168561
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2015,
+   "data": 0.00347125
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2016,
+   "data": 0.00231471
+ },
+ {
+   "variables": "NAICS 518 ISPs, Search Portals, & Data Processing\t",
+   "year": 2017,
+   "data": 0.00247584
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2000,
+   "data": -0.00082581
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2001,
+   "data": -0.00085286
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2002,
+   "data": -0.00080319
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2003,
+   "data": -0.00072702
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2004,
+   "data": -0.00042553
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2005,
+   "data": -0.00048658
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2006,
+   "data": -0.00045383
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2007,
+   "data": -0.0000941
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2008,
+   "data": 0.00027508
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2009,
+   "data": 0.00064076
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2010,
+   "data": 0.00197821
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2011,
+   "data": 0.00291913
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2012,
+   "data": 0.00384189
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2013,
+   "data": 0.00537288
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2014,
+   "data": 0.00645147
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2015,
+   "data": 0.00786676
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2016,
+   "data": 0.01014175
+ },
+ {
+   "variables": "NAICS 519 Other Information Services",
+   "year": 2017,
+   "data": 0.01140023
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2000,
+   "data": 0.028942
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2001,
+   "data": 0.03020533
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2002,
+   "data": 0.02736229
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2003,
+   "data": 0.02841501
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2004,
+   "data": 0.02914217
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2005,
+   "data": 0.02721012
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2006,
+   "data": 0.03481747
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2007,
+   "data": 0.03790444
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2008,
+   "data": 0.03263645
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2009,
+   "data": 0.03088953
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2010,
+   "data": 0.03288573
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2011,
+   "data": 0.03896798
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2012,
+   "data": 0.03668457
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2013,
+   "data": 0.04126375
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2014,
+   "data": 0.04114619
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2015,
+   "data": 0.03994397
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2016,
+   "data": 0.03733716
+ },
+ {
+   "variables": "NAICS 522 Credit Intermediation & Related Activity",
+   "year": 2017,
+   "data": 0.0392947
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2000,
+   "data": 0.30512432
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2001,
+   "data": 0.30537466
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2002,
+   "data": 0.24630629
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2003,
+   "data": 0.22906499
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2004,
+   "data": 0.27853007
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2005,
+   "data": 0.29979629
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2006,
+   "data": 0.35329405
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2007,
+   "data": 0.40848298
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2008,
+   "data": 0.38567957
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2009,
+   "data": 0.28042076
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2010,
+   "data": 0.3195833
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2011,
+   "data": 0.31364564
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2012,
+   "data": 0.29441033
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2013,
+   "data": 0.2794721
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2014,
+   "data": 0.31129819
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2015,
+   "data": 0.283197
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2016,
+   "data": 0.26707805
+ },
+ {
+   "variables": "NAICS 523 Financial Investment & Related Activity",
+   "year": 2017,
+   "data": 0.29581352
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2000,
+   "data": 0.01005252
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2001,
+   "data": 0.01244313
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2002,
+   "data": 0.01241742
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2003,
+   "data": 0.01369697
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2004,
+   "data": 0.01424763
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2005,
+   "data": 0.01434902
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2006,
+   "data": 0.01248225
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2007,
+   "data": 0.01226632
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2008,
+   "data": 0.01213126
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2009,
+   "data": 0.01472059
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2010,
+   "data": 0.01300704
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2011,
+   "data": 0.01427972
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2012,
+   "data": 0.01533099
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2013,
+   "data": 0.01570359
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2014,
+   "data": 0.01550631
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2015,
+   "data": 0.01519275
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2016,
+   "data": 0.0155157
+ },
+ {
+   "variables": "NAICS 524 Insurance Carriers & Related Activities",
+   "year": 2017,
+   "data": 0.01413656
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2000,
+   "data": 0.03553646
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2001,
+   "data": 0.03409832
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2002,
+   "data": 0.03722286
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2003,
+   "data": 0.03882468
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2004,
+   "data": 0.03697722
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2005,
+   "data": 0.0379884
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2006,
+   "data": 0.03314425
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2007,
+   "data": 0.02957085
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2008,
+   "data": 0.03436279
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2009,
+   "data": 0.04375084
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2010,
+   "data": 0.04126667
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2011,
+   "data": 0.04331194
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2012,
+   "data": 0.04626092
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2013,
+   "data": 0.04841514
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2014,
+   "data": 0.04798156
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2015,
+   "data": 0.05151228
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2016,
+   "data": 0.05553115
+ },
+ {
+   "variables": "NAICS 541 Professional and Technical Services",
+   "year": 2017,
+   "data": 0.05084679
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2000,
+   "data": 0.03300857
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2001,
+   "data": 0.03062037
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2002,
+   "data": 0.0412879
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2003,
+   "data": 0.03292196
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2004,
+   "data": 0.03098103
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2005,
+   "data": 0.03094617
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2006,
+   "data": 0.02910245
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2007,
+   "data": 0.03122346
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2008,
+   "data": 0.02899446
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2009,
+   "data": 0.02541551
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2010,
+   "data": 0.03543892
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2011,
+   "data": 0.03484755
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2012,
+   "data": 0.03485367
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2013,
+   "data": 0.03345599
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2014,
+   "data": 0.03116097
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2015,
+   "data": 0.03010374
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2016,
+   "data": 0.02500301
+ },
+ {
+   "variables": "NAICS 551 Management of Companies and Enterprises",
+   "year": 2017,
+   "data": 0.02490107
+ }
+]
+  // instantiate d3plus
+  var visualization = d3plus.viz()
+    .container("#viz")  // container DIV to hold the visualization
+    .data(sample_data)  // data to use with the visualization
+    .type("stacked")    // visualization type
+    .id("variables")         // key for which our data is unique on
+    .text("variables")       // key to use for display text
+    .y("data")         // key to use for y-axis
+    .x("year")          // key to use for x-axis
+    .time("year")       // key to use for time
+    .draw()             // finally, draw the visualization!
+</script>
