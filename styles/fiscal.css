@@ -88,7 +88,7 @@ h1, p {
 
 
 /*REVENUE CHART*/
-#revenue svg, #spending svg {
+#revenue svg #spending svg{
 font: 14px sans-serif;
 shape-rendering: crispEdges;
 }
@@ -122,7 +122,7 @@ stroke: none;
   padding-bottom: 0;
 }
 
-#caption h1, p {
+/*#caption h1, p {
   text-align: center;
 }
 
@@ -198,7 +198,7 @@ text.source {
   p{
     margin-top:0;
   }
-.navbar-inverse {
+/*.navbar-inverse {
   background: #2E2F31;
   border: 0;
-}
+}*/
