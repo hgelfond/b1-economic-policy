@@ -90,29 +90,21 @@ h1, p {
 
 /*MOBILITY MAP*/
 
-<<<<<<< HEAD
-#mobility80 .states, #mobility40 .states {
-=======
 #mobility40 .states, #mobility80 .states {
->>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
 }
 
-<<<<<<< HEAD
 #mobility80 .states-choropleth, #mobility40 .states-choropleth {
   fill: #ccc;
 }
 
-#mobility80 #tooltip-container, #mobility40 #tooltip-container {
-=======
 #mobility40 .states-choropleth, #mobility80 .states-choropleth {
   fill: #ccc;
 }
 
 #tooltip-container40, #tooltip-container80 {
->>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
   position: absolute;
   background-color: #fff;
   color: #000;
@@ -121,16 +113,6 @@ h1, p {
   display: none;
 }
 
-<<<<<<< HEAD
-
-#mobility .tooltip_key {
-  font-weight: bold;
-}
-
-#mobility .tooltip_value  {
-  margin-left: 20px;
-  float: left;
-=======
 #mobility80 .tooltip_key, #mobility40 .tooltip_key {
   font-weight: bold;
 }
@@ -138,20 +120,12 @@ h1, p {
 #mobility80 .tooltip_value, #mobility40 .tooltip_value {
   margin-left: 20px;
   float: right;
->>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
 }
 
 #mobility svg {
   display: block;
   margin: 0 auto;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f61937ae40aa2554816e3a1d5fe06640072f8fee
-
-
 
 /*REVENUE CHART*/
 #revenue svg, #spending svg {
@@ -168,7 +142,6 @@ stroke:none;
 
 #revenue path.domain, #spending path.domain {
 stroke: none;
-
 }
 
 #revenue .y .tick line, #spending .y .tick line  {
@@ -258,7 +231,6 @@ stroke: none;
   font-size: 14px;
 }
 
-
 /*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
 
 .jumbotron {
@@ -281,6 +253,7 @@ stroke: none;
     height: 225px;
     border:7px solid $white;
   }
+  
   h4 {
     margin-top:25px;  
     margin-bottom:0px;
@@ -290,8 +263,6 @@ stroke: none;
   p{
     margin-top:0;
   }
-}
-
 .navbar-inverse {
   background: #2E2F31;
   border: 0;
@@ -312,6 +283,114 @@ stroke: none;
 #facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
 
 #facts tr:hover {background-color: #ddd;}
+
+/*Inequality chart*/
+.chart-wrapper {
+    max-width: 950px;
+    min-width: 304px;
+    margin: 0 auto;
+    background-color: #FAF7F7;
+}
+
+.chart-wrapper .inner-wrapper {
+    position: relative;
+    padding-bottom: 50%;
+    width: 100%;
+}
+
+.chart-wrapper .outer-box {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.chart-wrapper .inner-box {
+    width: 100%;
+    height: 100%;
+}
+
+.chart-wrapper text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+.chart-wrapper p {
+    font-size: 16px;
+    margin-top:5px;
+    margin-bottom: 40px;
+}
+
+.chart-wrapper .axis path,
+.chart-wrapper .axis line {
+    fill: none;
+    stroke: #1F1F2E;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+  
+.chart-wrapper .axis path {
+  stroke-width: 2px;
+}
+
+.chart-wrapper .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 5px;
+}
+
+.chart-wrapper .legend  {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 16px;
+    padding: 10px 40px;
+}
+.chart-wrapper .legend > div {
+    margin: 0px 25px 10px 0px;
+    flex-grow: 0;
+}
+.chart-wrapper .legend p {
+    display:inline;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.chart-wrapper .legend .series-marker {
+    height: 1em;
+    width: 1em;
+    border-radius: 35%;
+    background-color: crimson;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: -0.16rem;
+}
+
+.chart-wrapper .overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.chart-wrapper .focus circle {
+  fill: crimson;
+  stroke: crimson;
+  stroke-width: 2px;
+  fill-opacity: 15%;
+}
+.chart-wrapper .focus rect {
+    fill: lightblue;
+    opacity: 0.4;
+    border-radius: 2px;
+}
+.chart-wrapper .focus.line {
+    stroke: steelblue;
+    stroke-dasharray: 2,5;
+    stroke-width: 2;
+    opacity: 0.5;
+}
+@media (max-width:500px){
+    .chart-wrapper .line {stroke-width: 3px;}
+    .chart-wrapper .legend {font-size: 14px;}
+}
 
 /*WORLD MAP at Index.html*/
 
