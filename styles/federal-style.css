@@ -96,6 +96,10 @@ h1, p {
   stroke-linejoin: round;
 }
 
+#mobility80 .states-choropleth, #mobility40 .states-choropleth {
+  fill: #ccc;
+}
+
 #mobility40 .states-choropleth, #mobility80 .states-choropleth {
   fill: #ccc;
 }
@@ -123,12 +127,9 @@ h1, p {
   margin: 0 auto;
 }
 
-
-
-
 /*REVENUE CHART*/
 #revenue svg, #spending svg {
-font: 12px sans-serif;
+font: 14px sans-serif;
 shape-rendering: crispEdges;
 }
 
@@ -136,7 +137,7 @@ shape-rendering: crispEdges;
 #revenue .axis path,
 #revenue .axis line, #spending .axis path, #spending .axis line {
 fill: none;
-stroke: #000;
+stroke:none;
 }
 
 #revenue path.domain, #spending path.domain {
@@ -144,7 +145,7 @@ stroke: none;
 }
 
 #revenue .y .tick line, #spending .y .tick line  {
-stroke: #ddd;
+stroke: none;
 }
 
 /*slider chart styling*/
@@ -230,7 +231,6 @@ stroke: #ddd;
   font-size: 14px;
 }
 
-
 /*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
 
 .jumbotron {
@@ -253,6 +253,7 @@ stroke: #ddd;
     height: 225px;
     border:7px solid $white;
   }
+  
   h4 {
     margin-top:25px;  
     margin-bottom:0px;
@@ -262,12 +263,10 @@ stroke: #ddd;
   p{
     margin-top:0;
   }
-}
-
 .navbar-inverse {
   background: #2E2F31;
   border: 0;
-
+}
 /*QUICK FACTS STYLES - THIS SHOULD BE USED FOR ANY OTHER TABLES ALSO*/
 
 #facts {
@@ -284,7 +283,6 @@ stroke: #ddd;
 #facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
 
 #facts tr:hover {background-color: #ddd;}
-
 
 /*Inequality chart*/
 .chart-wrapper {
@@ -327,8 +325,8 @@ stroke: #ddd;
     stroke: #1F1F2E;
     stroke-opacity: 0.7;
     shape-rendering: crispEdges;
-
 }
+  
 .chart-wrapper .axis path {
   stroke-width: 2px;
 }
@@ -394,6 +392,7 @@ stroke: #ddd;
     .chart-wrapper .legend {font-size: 14px;}
 }
 
+/*WORLD MAP at Index.html*/
 
 
 
