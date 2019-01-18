@@ -51,7 +51,7 @@ d3.csv("data/worldmap.csv", function(err, data) {
     if (d > 1000) {
       return Math.round(d / 1000) + "k";
     } else {
-      return Math,round(d);
+      return Math.round(d);
     }
   }
   
@@ -89,10 +89,10 @@ d3.csv("data/worldmap.csv", function(err, data) {
   
   var graticule = d3.geo.graticule();
   
-  var svg = d3.select("#worldmap").append("svg")
+  var svg = d3.select("div#worldmap").append("svg")
       .attr("width", width)
-      .attr("height", height);
-  
+      .attr("height", height)
+
   svg.append("path")
       .datum(graticule)
       .attr("class", "graticule")
@@ -162,7 +162,7 @@ d3.csv("data/worldmap.csv", function(err, data) {
             html += "</span>";
             html += "</div>";
             
-            $("#worldmamp-tooltip").html(html);
+            $("#worldmap-tooltip").html(html);
             $(this).attr("fill-opacity", "0.8");
             $("#worldmap-tooltip").show();
             
@@ -176,7 +176,7 @@ d3.csv("data/worldmap.csv", function(err, data) {
                 .style("left", (d3.event.layerX + 15) + "px");
             } else {
               var tooltip_width = $("#worldmap-tooltip").width();
-              d3.select("#tworldmap-tooltip")
+              d3.select("#worldmap-tooltip")
                 .style("top", (d3.event.layerY + 15) + "px")
                 .style("left", (d3.event.layerX - tooltip_width - 30) + "px");
             }

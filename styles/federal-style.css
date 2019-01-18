@@ -245,7 +245,6 @@ stroke: none;
   padding-bottom: 0;
 }
 
-<<<<<<< HEAD
 #caption h1, p {
   text-align: center;
 }
@@ -272,7 +271,7 @@ line {
   stroke: red;
 }
 
-line#limit {
+#limit line {
   stroke-width: 3;
   stroke-dasharray: 50;
 }
@@ -303,7 +302,7 @@ text.label {
 text.source {
   font-size: 10px;
 }
-=======
+
 .team-member {
   margin-bottom:50px;
   text-align:center;
@@ -489,7 +488,3 @@ text.source {
   margin-left: 20px;
   float: right;
 }
-
-
-
->>>>>>> 141bbb9c641cd5a0b54383b39a0d8199fb9c27ac
