@@ -90,17 +90,21 @@ h1, p {
 
 /*MOBILITY MAP*/
 
-#mobility80 .states {
+#mobility40 .states, #mobility80 .states {
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
 }
 
-#mobility80 .states-choropleth {
+#mobility80 .states-choropleth, #mobility40 .states-choropleth {
   fill: #ccc;
 }
 
-#mobility80 #tooltip-container {
+#mobility40 .states-choropleth, #mobility80 .states-choropleth {
+  fill: #ccc;
+}
+
+#tooltip-container40, #tooltip-container80 {
   position: absolute;
   background-color: #fff;
   color: #000;
@@ -109,59 +113,23 @@ h1, p {
   display: none;
 }
 
-#mobility80 .tooltip_key {
+#mobility80 .tooltip_key, #mobility40 .tooltip_key {
   font-weight: bold;
 }
 
-#mobility80 .tooltip_value {
+#mobility80 .tooltip_value, #mobility40 .tooltip_value {
   margin-left: 20px;
   float: right;
 }
 
-#mobility80 svg {
+#mobility svg {
   display: block;
   margin: 0 auto;
 }
-
-/*MOBILITY MAP*/
-
-#mobility40 .states {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-
-#mobility40 .states-choropleth {
-  fill: #ccc;
-}
-
-#mobility40 #tooltip-container {
-  position: absolute;
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
-  border: 1px solid;
-  display: none;
-}
-
-#mobility40 .tooltip_key {
-  font-weight: bold;
-}
-
-#mobility40 .tooltip_value {
-  margin-left: 20px;
-  float: right;
-}
-
-#mobility40 svg {
-  display: block;
-  margin: 0 auto;
-}
-
 
 /*REVENUE CHART*/
 #revenue svg, #spending svg {
-font: 12px sans-serif;
+font: 14px sans-serif;
 shape-rendering: crispEdges;
 }
 
@@ -169,7 +137,7 @@ shape-rendering: crispEdges;
 #revenue .axis path,
 #revenue .axis line, #spending .axis path, #spending .axis line {
 fill: none;
-stroke: #000;
+stroke:none;
 }
 
 #revenue path.domain, #spending path.domain {
@@ -177,7 +145,7 @@ stroke: none;
 }
 
 #revenue .y .tick line, #spending .y .tick line  {
-stroke: #ddd;
+stroke: none;
 }
 
 /*slider chart styling*/
@@ -263,7 +231,6 @@ stroke: #ddd;
   font-size: 14px;
 }
 
-
 /*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
 
 .jumbotron {
@@ -278,7 +245,6 @@ stroke: #ddd;
   padding-bottom: 0;
 }
 
-<<<<<<< HEAD
 #caption h1, p {
   text-align: center;
 }
@@ -305,7 +271,7 @@ line {
   stroke: red;
 }
 
-line#limit {
+#limit line {
   stroke-width: 3;
   stroke-dasharray: 50;
 }
@@ -336,7 +302,7 @@ text.label {
 text.source {
   font-size: 10px;
 }
-=======
+
 .team-member {
   margin-bottom:50px;
   text-align:center;
@@ -345,6 +311,7 @@ text.source {
     height: 225px;
     border:7px solid $white;
   }
+  
   h4 {
     margin-top:25px;  
     margin-bottom:0px;
@@ -354,8 +321,6 @@ text.source {
   p{
     margin-top:0;
   }
-}
-
 .navbar-inverse {
   background: #2E2F31;
   border: 0;
@@ -377,8 +342,149 @@ text.source {
 
 #facts tr:hover {background-color: #ddd;}
 
+/*Inequality chart*/
+.chart-wrapper {
+    max-width: 950px;
+    min-width: 304px;
+    margin: 0 auto;
+    background-color: #FAF7F7;
+}
+
+.chart-wrapper .inner-wrapper {
+    position: relative;
+    padding-bottom: 50%;
+    width: 100%;
+}
+
+.chart-wrapper .outer-box {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.chart-wrapper .inner-box {
+    width: 100%;
+    height: 100%;
+}
+
+.chart-wrapper text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+.chart-wrapper p {
+    font-size: 16px;
+    margin-top:5px;
+    margin-bottom: 40px;
+}
+
+.chart-wrapper .axis path,
+.chart-wrapper .axis line {
+    fill: none;
+    stroke: #1F1F2E;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+  
+.chart-wrapper .axis path {
+  stroke-width: 2px;
+}
+
+.chart-wrapper .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 5px;
+}
+
+.chart-wrapper .legend  {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 16px;
+    padding: 10px 40px;
+}
+.chart-wrapper .legend > div {
+    margin: 0px 25px 10px 0px;
+    flex-grow: 0;
+}
+.chart-wrapper .legend p {
+    display:inline;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.chart-wrapper .legend .series-marker {
+    height: 1em;
+    width: 1em;
+    border-radius: 35%;
+    background-color: crimson;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: -0.16rem;
+}
+
+.chart-wrapper .overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.chart-wrapper .focus circle {
+  fill: crimson;
+  stroke: crimson;
+  stroke-width: 2px;
+  fill-opacity: 15%;
+}
+.chart-wrapper .focus rect {
+    fill: lightblue;
+    opacity: 0.4;
+    border-radius: 2px;
+}
+.chart-wrapper .focus.line {
+    stroke: steelblue;
+    stroke-dasharray: 2,5;
+    stroke-width: 2;
+    opacity: 0.5;
+}
+@media (max-width:500px){
+    .chart-wrapper .line {stroke-width: 3px;}
+    .chart-wrapper .legend {font-size: 14px;}
+}
+
 /*WORLD MAP at Index.html*/
 
 
+#worldmap body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+  height: 500px;
+  position: relative;
+}
 
->>>>>>> 141bbb9c641cd5a0b54383b39a0d8199fb9c27ac
+
+#worldmap .land {
+  fill: #222;
+}
+
+#worldmap .boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+#worldmap-tooltip {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+
+#worldmap-tooltip .tooltip_key {
+  font-weight: bold;
+}
+
+#worldmap-tooltip .tooltip_value {
+  margin-left: 20px;
+  float: right;
+}

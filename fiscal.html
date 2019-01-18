@@ -26,74 +26,79 @@
 <div class="jumbotron">
 	<div class="container">
 		<h1>Fiscal Policy</h1>
-		<h2>Sub-heading</h2>
+<!-- 		<h2>Sub-heading</h2>
 		<br>
 		<img src="#" width="800" height="400" alt="#">
 		<br>
-		<p> Data Source: <a href="#"></a></p>
+		<p> Data Source: <a href="#"></a></p> -->
 		
+		<br>
 		<br>
 	</div>	
 </div>
-
-<div align = "center" class = "substory">
-	<h1><strong>The federal government will have limited capacity to address future economic problems. </strong><br><br></h1>
+<div class="container">
+	<div class="column">
+		<div class="row-md-12"></div>
+		<h1><strong>In order to be able to successfully respond to economic problems such as income inequality, the federal government must addresss its fiscal shortfall. </strong><br><br></h1>
+	</div>
 </div>
+<div class="container">
+	<div class="column">
+		<div class="row-md-12"></div>
+			<p>The federal government is primarily funded through individual income taxes, payroll taxes and corporate taxes. In 2018, federal revenue totaled 16.6 percent of GDP. </p>
 
-<h2> The current fiscal status: revenue and expenditures </h2>
-<br>
-<p>The federal government is primarily funded through individual income taxes, payroll taxes and corporate taxes. In 2018, federal revenue totaled 16.6 percent of GDP. </p>
+			<p>Federal spending is composed of mandatory spending, which is written into law, and discretionary spending, which must be re-appropriated each year. Mandatory spending funds some of the largest government programs: Social Security, Medicare and Medicaid. Defense spending is part of the discretionary budget. Non-defense discretionary spending includes all other functions of government you may be familiar with. Federal spending totaled 20.6 percent of GDP in 2018.</p>
+			<br>
+			<h2> The current fiscal status: expenditures exceed revenue. </h2>
 
-<p>Federal spending is composed of mandatory spending, which is written into law, and discretionary spending, which must be re-appropriated each year. Mandatory spending funds some of the largest government programs: Social Security, Medicare and Medicaid. Defense spending is part of the discretionary budget. Non-defense discretionary spending includes all other functions of government you may be familiar with. Federal spending totaled 20.6 percent of GDP in 2018.</p>
-<div class="row">
-<!--   <div class="column">
-  	<img src = "spending.png" style="width:500px;height:300px;"></div>
- --><!-- <div class="column">
-	<img src = "revenue.png" style="width:500px;height:300px;"></div>
+			<div class="row">
+			<!--   <div class="column">
+			  	<img src = "spending.png" style="width:500px;height:300px;"></div>
+			 --><!-- <div class="column">
+				<img src = "revenue.png" style="width:500px;height:300px;"></div>
+			</div>
+			 --><br>
+			<div id = "revenue" width="200" height="700"></div>
+			<div id = "spending" width="200" height="900"></div>
+			<br>
+			<div>
+			<p> Data Source:
+			<a href = "https://www.cbo.gov/publication/54318">
+			Congressional Budget Office (2018).</a> </p>
+			<p> D3 Source: 
+			<a href ="http://bl.ocks.org/mstanaland/6100713">http://bl.ocks.org/mstanaland/6100713</a></div>
+
+		<div class="row-md-12"></div>
+
+			 <h2> Rising debt will constrain economic growth and policy responses to income inequality
+			 <br>...Especially after accounting for the effects of the new tax law.</h2>
+
+			 <p>Notice that federal spending exceeds federal revenues - the extent to which this occurs is called the deficit. In 2018, the federal deficit was 3.9 percent of GDP. The compounding of annual deficits and interest payments generates estimates of the federal debt.</p>
+
+			 <h2> Federal debt as a share of GDP has increased steadily over time and is projected to continue its upward ascent.</h2>
+			 <div id="cboChart" width="1000" height="700"></div>
+			 <br>
+			 <p1> Data Source: <a href="https://www.cbo.gov/publication/54318">Congressional Budget Office (2018).</a></p>
+			 <p1> D3 Source: <a href = "https://bl.ocks.org/mbostock/3902569">https://bl.ocks.org/mbostock/3902569 </a></p1><br>
+			 <br>
+		
+		<div class="row-md-12"></div>
+
+			 <h2>How does United States debt compare to other G7 countries? (Canada, France, Germany, Italy, Japan and the United Kingdom) </h2>
+
+			 <h2>US debt to GDP ranks XXX among t</h2>  
+			 <div id="sliderChart" width="800" height="700"></div>
+			 <p>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p>
+			 <br>
+			 </p>
+			 </div>
+			 </div>
+			 <h2>Debt to GDP Ratio of G7+3 countries</h2>
+			 <p>General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. </p>
+
+			 <p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
+	</div>
 </div>
- --><br>
-<div id = "revenue" width="300" height="700">
-</div>
-<div id = "spending" width="300" height="900">
-</div>
-<br>
-<p> Source:
-<a href = "https://www.cbo.gov/publication/54318">
-Congressional Budget Office (2018).</a> </p>
-
-
-<h2> Rising debt will constrain economic growth and policy responses to income inequality
-<br>...Especially after accounting for the effects of the new tax law.</h2>
-
-<p>Notice that federal spending exceeds federal revenues - the extent to which this occurs is called the deficit. In 2018, the federal deficit was 3.9 percent of GDP. The compounding of annual deficits and interest payments generates estimates of the federal debt.</p>
-
-<p> <strong><center> Federal debt as a share of GDP has increased steadily over time and is projected to continue to do so. </center></strong></p>
-<div id="cboChart" width="1000" height="700"></div>
-<br>
-<p1> Data Source: <a href="https://www.cbo.gov/publication/54318">Congressional Budget Office (2018).</a></p>
-
-
-<h2>How does United States debt compare to other G7 countries? (Canada, France, Germany, Italy, Japan and the United Kingdom) </h2>
-
-      <br>
-
-</style>
-<h2>US debt to GDP ranks XXX among t</h2>  
-<div id="sliderChart" width="800" height="700"></div>
-<p>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p>
-<br>
-</div>
-</div>
-</p>
-</div>
-</div>
-<h2>Debt to GDP Ratio of G7+3 countries</h2>
-<p>General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. </p>
-
-<p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
-<br>
-
-
 <br>
 <br>
 

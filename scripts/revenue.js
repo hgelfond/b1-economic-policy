@@ -119,14 +119,12 @@
   var tooltip = svg.append("g")
     .attr("class", "tooltip")
     .style("display", "none")
-    .attr("id", "revenue");
       
   tooltip.append("rect")
     .attr("width", 30)
     .attr("height", 20)
     .attr("fill", "white")
     .style("opacity", 1)
-    .attr("id", "revenue");
 
   tooltip.append("text")
     .attr("x", 15)
@@ -134,5 +132,4 @@
     .style("text-anchor", "middle")
     .attr("font-size", "14px")
     .attr("font-weight", "bold")
-    .attr("id", "revenue");
 })();
