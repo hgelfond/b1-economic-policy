@@ -6,7 +6,7 @@
     
     var COLOR_COUNTS = 9;
     
-    var SCALE = 0.7;
+    var SCALE = 0.6;
     
     function Interpolate(start, end, steps, count) {
       var s = start,
