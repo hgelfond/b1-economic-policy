@@ -1,6 +1,6 @@
 
 (function(){
-  var svg = d3.select("sliderChart").append("svg"),
+  var svg = d3.select("body").append("svg")
       margin = {top: 120, right: 20, bottom: 20, left: 50},
       width = +svg.attr("width") - margin.left - margin.right,
       height = +svg.attr("height") - margin.top - margin.bottom,
@@ -18,7 +18,7 @@
   d3.select(window)
       .on("keydown", keydowned);
 
-  d3.csv("intldata3.csv", function(error, _data) {
+  d3.csv("past/intldata3.csv", function(error, _data) {
     if (error) throw error;
 
     title = _data.columns[0];
@@ -126,5 +126,3 @@
     d3.event.preventDefault();
    }
   });
-
-})();

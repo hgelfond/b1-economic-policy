@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Fiscal Policy </title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link href="styles/federal-style.css" rel="stylesheet" type = "text/css">
+	<link href="styles/fiscal.css" rel="stylesheet" type = "text/css">
 </head>
 
 <body>
@@ -85,7 +85,7 @@
 		<div class="row-md-12"></div>
 
 
-<!--<International perspective chart> -->
+<!--<International perspective chart> -
 			 <h2>How does United States debt compare to other G7 countries? (Canada, France, Germany, Italy, Japan and the United Kingdom) </h2>
 
 			 <h2>US debt to GDP ranks XXX among t</h2>  
@@ -99,6 +99,226 @@
 			 <p>General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. </p>
 
 			 <p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
+			
+
+    <div id="sliderChart">
+<style>
+text {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  fill: #777;
+}
+.axis {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.axis--y line {
+  display: none;
+}
+.axis--x line {
+  stroke: #eee;
+}
+.axis .domain {
+  fill: none;
+  stroke: none;
+}
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+.track-inset {
+  stroke: #eee;
+  stroke-width: 8px;
+}
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+rect.bar {
+  fill: #ABD80A;
+  shape-rendering: crispEdges;
+}
+.year,
+.total {
+  text-anchor: end;
+}
+.title {
+  font-size: 24px;
+}
+.total {
+  font-size: 20px;
+  fill: #ABD80A;
+}
+.year {
+  font-size: 14px;
+}
+}
+</style>
+    
+        <h1>Debt to GDP (G7+3countries)</h1>
+        <h2>Which country's debt grew from 1995 to 2016?</h2>  
+        <p>
+General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. 
+            <svg width="650" height="450"></svg>
+        <p>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p>
+        <br> 
+        <p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
+        <br>
+        <p1> Visualizations: <a href="https://www.linkedin.com/in/jun-mukoyama-oikawa-a35909104/">Jun Mukoyama</a></p1>
+        <br> 
+        <p1> Last Updated: 01-13-2019</p1>
+   </div>
+  </div>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+     <script>
+  var svg = d3.select("svg"),
+      margin = {top: 120, right: 20, bottom: 20, left: 50},
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = +svg.attr("height") - margin.top - margin.bottom,
+      g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  var x = d3.scaleLinear().range([0, width]),
+      y = d3.scaleBand().paddingInner(0.4).paddingOuter(0.4).rangeRound([0, height]),
+      t = d3.scaleLinear().range([0, width - 50]).clamp(true);
+  var data,
+      title,
+      handle,
+      currentValue;
+  d3.select(window)
+      .on("keydown", keydowned);
+  d3.csv("past/intldata3.csv", function(error, _data) {
+    if (error) throw error;
+    title = _data.columns[0];
+    data = d3.entries(_data).slice(0,-1).map(function(d) { return d.value; });
+    x.domain([0, Math.round(d3.max(data, function(d) { return +d3.max(d3.values(d).slice(0,-1)); }) / 10) * 10]);
+    y.domain(data.map(function(d) { return d[title]; }));
+    t.domain(d3.extent(d3.keys(data[0]).slice(0,-1)));
+    currentValue = t.domain()[1];
+    g.append("text")
+        .attr("class", "total")
+        .attr("x", width)
+        .attr("y", -80)
+        .attr("dy", "0.35em")
+        .text("");
+    g.append("g")
+        .attr("class", "axis axis--y")
+        .call(d3.svg.axis().scale(y));
+    g.append("g")
+        .attr("class", "axis axis--x")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.svg.axis().scale(x)
+          .ticks(4, ".0s")
+          .tickSize(-height))
+        .select(".tick:last-of-type text")
+        .select(function() { return this.parentNode.appendChild(this.cloneNode()); })
+          .attr("y", -12)
+          .attr("text-anchor", "end")
+          .text("(trillion US$)");
+    var slider = svg.append("g")
+        .attr("class", "slider")
+        .attr("transform", "translate(" + margin.left + "," + margin.top / 1.5 + ")");
+    slider.append("line")
+        .attr("class", "track")
+        .attr("x1", t.range()[0])
+        .attr("x2", t.range()[1])
+      .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+        .attr("class", "track-inset")
+      .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+        .attr("class", "track-overlay")
+        .call(d3.drag()
+            .on("start.interrupt", function() { slider.interrupt(); })
+            .on("start drag", function() {
+              currentValue = Math.round(t.invert(d3.event.x));
+              update();
+            }));
+    slider.insert("g", ".track-overlay")
+        .attr("class", "ticks")
+        .attr("transform", "translate(0," + 18 + ")")
+      .selectAll("text")
+      .data(t.ticks(5))
+      .enter().append("text")
+        .attr("x", t)
+        .attr("text-anchor", "middle")
+        .text(function(d) { return d; });
+    slider.append("text")
+        .attr("class", "year")
+        .attr("x", width)
+        .attr("dy", "0.35em")
+        .text("year");
+    handle = slider.insert("circle", ".track-overlay")
+        .attr("class", "handle")
+        .attr("r", 8);
+    update();
+  });
+  function update() {
+    var bar = g.selectAll(".bar")
+        .data(data, function(d) { return d[title]; });
+    bar.enter().append("rect")
+        .attr("class", "bar")
+        .attr("y", function (d) { return y(d[title]); })
+        .attr("height", y.bandwidth())
+        .attr("width", function(d) { return x(d[currentValue]); });
+    bar.append("text").text(function(d) { return d[currentValue]; });
+    bar.transition()
+        .duration(750)
+        .ease(d3.easeLinear)
+        .attr("width", function(d) { return x(d[currentValue]); });
+    handle.attr("cx", t(currentValue));
+    
+  }
+  function keydowned() {
+    if (d3.event.metaKey || d3.event.altKey) return;
+    switch (d3.event.keyCode) {
+      case 37: currentValue = Math.max(t.domain()[0], currentValue - 1); break;
+      case 39: currentValue = Math.min(t.domain()[1], currentValue + 1); break;
+      default: return;
+    }
+    update();
+    d3.event.preventDefault();
+  }
+    </script>
+
+     -->
+
+
+
+	
+		<h1>What People Are Reading Right Now (Fake Data)</h1>
+		<h2>Top 10 Articles by Concurrent Page Views</h2>	
+		<div id="chart"></div>
+
+	
+
+<br>
+<br>
+<a href = "index.html"> Home </a> 
+
+
+<br>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
 	</div>
 </div>
 <br>
@@ -117,10 +337,10 @@
 
 <!--<script for debt chart> -->
 <script src= "scripts/debt.js"> </script>
+<script src= "scripts/fiscal-barchart.js"> </script>
 
-
-<!--<script for international debt chart> -->
-<script src= "scripts/international-main.js"> </script>
+<!--<script for international debt chart> 
+<script src= "scripts/international-main.js"> </script>-->
 
 
 </body>
