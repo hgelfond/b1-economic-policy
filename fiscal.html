@@ -87,19 +87,23 @@
 		
 		<div class="row-md-12"></div>
 
-			 <h2>How does United States debt compare to other G7 countries? (Canada, France, Germany, Italy, Japan and the United Kingdom) </h2>
+            <!-- Note on international bar chart: I had to give up on slider chart that contains year slider and  historical data ecause of the version difference in d3. (I spent fair amount of time in conforming the versions and debugging but did not have enough time.)Instead, I used a simple bar chart.
+			 -->
 
-			 <h2>US debt to GDP ranks XXX among t</h2>  
-			 <div id="sliderChart" width="800" height="700"></div>
-			 <p>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p>
+			 <h2>In 2017, US debt ranked How does United States debt compare to other G7 countries? (Canada, France, Germany, Italy, Japan and the United Kingdom) </h2>
+
+			 <h2>US debt to GDP ranks XXX among t</h2>  	
+		     <div id="chart"></div>
+			 <p1>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p1>
+			 <br>
+			 <p1>D3 Source: <a href=https://gist.github.com/charlesdguthrie/11356441>Bar Chart</a></p1>
 			 <br>
 			 </p>
 			 </div>
 			 </div>
-			 <h2>Debt to GDP Ratio of G7+3 countries</h2>
-			 <p>General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. </p>
+			 <h2>Debt to GDP Ratio</h2>
+			 <p>In the above comparison, the amount of a country's total gross government debt as a percentage of its GDP is used.  </p>
 
-			 <p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
 	</div>
 </div>
 <br>
@@ -126,12 +130,12 @@
 	<script src="scripts/revenue.js"></script>
 	<script src = "scripts/spending.js"></script>
 
-
 	<!--<script for debt chart> -->
 	<script src= "scripts/debt.js"> </script>
 
 
 	<!--<script for international debt chart> -->
+<script src= "scripts/fiscal-barchart.js"> </script>
 	<!-- <script src= "scripts/international-main.js"> </script> -->
 </body>
 
