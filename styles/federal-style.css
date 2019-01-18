@@ -454,5 +454,42 @@ text.source {
 /*WORLD MAP at Index.html*/
 
 
+#worldmap body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+  height: 500px;
+  position: relative;
+}
+
+
+#worldmap .land {
+  fill: #222;
+}
+
+#worldmap .boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+#worldmap-tooltip {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+
+#worldmap-tooltip .tooltip_key {
+  font-weight: bold;
+}
+
+#worldmap-tooltip .tooltip_value {
+  margin-left: 20px;
+  float: right;
+}
+
+
 
 >>>>>>> 141bbb9c641cd5a0b54383b39a0d8199fb9c27ac
