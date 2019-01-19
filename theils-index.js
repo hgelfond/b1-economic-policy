@@ -11,5 +11,4 @@
     .x("year")          // key to use for x-axis
     .time("year")       // key to use for time
     .draw()             // finally, draw the visualization!
-   
  }
