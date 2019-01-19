@@ -108,6 +108,26 @@ stroke: none;
 stroke: none;
 }
 
+/*INTERNATIONAL DEBT CHART*/
+
+#chart{
+  width:1000px;
+  height:400px;
+}
+#chart .bar{
+  fill:#001f3f;
+}
+#chart text.label{
+  fill: #ededed ;
+  color: #ededed ;
+  font-size: 20px;
+  font-weight: bold;
+}
+#chart text.category{
+  fill: #ededed;
+  font-size: 14px;
+}
+
 /*All of the below text edits the jumbotron and nav bar with bootstrap modifications*/
 
 .jumbotron {
