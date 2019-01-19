@@ -13,14 +13,9 @@
 .container p {
   font-size: 16px;
 }
-/*JUMBOTRON STYLES*/
 
-.jumbotron {
-  color: black;
-  text-align: center;
-  padding-top: 1;
-  padding-bottom: 0;
-}
+
+/*JUMBOTRON STYLES*/
 
 .container h2 {
   font-size: 24px;
@@ -150,7 +145,7 @@ text.source {
 /*WORLD MAP at Index.html*/
 
 
-#worldmap body {
+body #worldmap {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 960px;
   height: 500px;

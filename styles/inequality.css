@@ -1,3 +1,10 @@
+/*style theil debugging outcome*/
+
+#theil-viz {
+  width: 1200px;
+  height: 500px;
+}
+
 /*NAV BAR STYLES*/
 
 .navbar-inverse {
@@ -202,3 +209,21 @@ text.source {
 #facts tr:nth-child(even), #facts tr:nth-child(even){background-color: #f2f2f2;}
 
 #facts tr:hover {background-color: #ddd;}
+
+
+/*Thiel viz*/
+#theil-viz text {
+    font: 12px sans-serif;
+}
+#theil-viz svg {
+    display: block;
+}
+#theil-viz html, #theil-viz body, #theil-viz svg {
+    margin: 0 auto;
+    padding-right: 200px;
+    height: 100%;
+    width: 100%;
+}
+
+
+

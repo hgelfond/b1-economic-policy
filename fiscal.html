@@ -38,8 +38,8 @@
 </div>
 <div class="container">
 	<div class="column">
-		<div class="row-md-12"></div>
-		<h1><strong>In order to be able to successfully respond to economic problems such as income inequality, the federal government must addresss its fiscal shortfall. </strong><br><br></h1>
+		<div class="row-md-12" align = "center"></div>
+		<h1><strong><center>In order to be able to successfully respond to economic problems such as income inequality, the federal government must addresss its fiscal shortfall.</center> </strong><br><br></h1>
 	</div>
 </div>
 <div class="container">
@@ -49,63 +49,81 @@
 
 			<p>Federal spending is composed of mandatory spending, which is written into law, and discretionary spending, which must be re-appropriated each year. Mandatory spending funds some of the largest government programs: Social Security, Medicare and Medicaid. Defense spending is part of the discretionary budget. Non-defense discretionary spending includes all other functions of government you may be familiar with. Federal spending totaled 20.6 percent of GDP in 2018.</p>
 			<br>
-			<h2> The current fiscal status: expenditures exceed revenue. </h2>
+			<br>
+			<h2> <center> The current fiscal status: expenditures exceed revenue.</center></h2>
 			</br>
+			<p> The two columns below compare revenue and spending by category as a share of GDP in 2018. The vast majority of federal revenues (in blue) come from the individual income tax and payroll tax. The greatest share of federal spending is dedicated to mandatory programs, which are highlighted in green. Discretionary programs make up a smaller share and are colored red in the chart below.
 			<div class="row" align = 'center'>
-			<!--   <div class="column">
-			  	<img src = "spending.png" style="width:500px;height:300px;"></div>
-			 --><!-- <div class="column">
-				<img src = "revenue.png" style="width:500px;height:300px;"></div>
-			</div>
-			 --><br>
-			<div id = "revenue" width="200" height="700"></div>
-			<div id = "spending" width="200" height="900"></div>
+				<div class="col-sm-6" align="center">
+					<div id = "revenue" width="200" height="700"></div>
+				</div>
+				<div class="col-sm-6" align="center">
+					<div id = "spending" width="200" height="900"></div>
+				</div>
 			<br>
 			</div>
 			<br>
-			<div class = 'row'>
-			<p> Data Source:
-			<a href = "https://www.cbo.gov/publication/54318">
-			Congressional Budget Office (2018).</a> </p></div>
-			<div class = 'row'>
-			<p> D3 Source: 
-			<a href ="http://bl.ocks.org/mstanaland/6100713">http://bl.ocks.org/mstanaland/6100713</a></div></p></div>
+			<div class = "row-md-12" align ="center">
+				<p> Data Source:
+				<a href = "https://www.cbo.gov/publication/54318">
+				Congressional Budget Office (2018).</a> </p>
+				<p> D3 Source: 
+				<a href ="http://bl.ocks.org/mstanaland/6100713">http://bl.ocks.org/mstanaland/6100713</a></div></p></div>
+			<br>
+			<br>
 			
-		<div class="row-md-12"></div>
+		<div class="row-md-12" align = "center"></div>
 
-			 <h2> Rising debt will constrain economic growth and policy responses to income inequality
-			 <br>...Especially after accounting for the effects of the new tax law.</h2>
+			 <h2> <center> Rising debt will constrain economic growth and policy responses to income inequality
+			 <br>...Especially after accounting for the effects of the new tax law.</center></h2> <br>
 
 			 <p>Notice that federal spending exceeds federal revenues - the extent to which this occurs is called the deficit. In 2018, the federal deficit was 3.9 percent of GDP. The compounding of annual deficits and interest payments generates estimates of the federal debt.</p>
-
-			 <h2> Federal debt as a share of GDP has increased steadily over time and is projected to continue its upward ascent.</h2>
+				<br>
+				<br>
+			 <h2> <center>Federal debt as a share of GDP has increased steadily over time <br> and is projected to continue its upward ascent. </center></h2>
 			 <div id="cboChart" width="1000" height="700"></div>
 			 <br>
-			 <p1> Data Source: <a href="https://www.cbo.gov/publication/54318">Congressional Budget Office (2018).</a></p>
-			 <p1> D3 Source: <a href = "https://bl.ocks.org/mbostock/3902569">https://bl.ocks.org/mbostock/3902569 </a></p1><br>
+			 <center><p1> Data Source: <a href="https://www.cbo.gov/publication/54318">Congressional Budget Office (2018).</a></p1><br>
+			 <p1> D3 Source: <a href = "https://bl.ocks.org/mbostock/3902569">https://bl.ocks.org/mbostock/3902569 </a></p1><br></center>
 			 <br>
-		
-		<div class="row-md-12"></div>
+             <br>
+             <br>
 
-			 <h2>How does United States debt compare to other G7 countries? (Canada, France, Germany, Italy, Japan and the United Kingdom) </h2>
+		<div class="row-md-12">
 
-			 <h2>US debt to GDP ranks XXX among t</h2>  
-			 <div id="sliderChart" width="800" height="700"></div>
-			 <p>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p>
+            <!-- Note on international bar chart: I had to give up on slider chart that contains year slider and  historical data because it had the different d3 version (v4) from other charts in this page. (I spent fair amount of time reconciling the versions and debugging but could not complete within time.)Therefore, instead, I used a simple bar chart with 2017 data.
+			 -->
+
+			 <h2><center>...And the US debt to GDP ratio ranked fifth among the OECD countries in 2016.
+			 <br> 
+			 The only countries with more debt as a share of the economy than the US are Japan and the "PIG" in Europe.</h2>
+             <br>
+             <h2><font color="gray"><center>General Government Debt as share (%) of GDP, 2016</font></center></h2>
+             <br>
+			 <div class="row" align = "center">	
+		     	<div id="chart"></div>
+		     </div>
+		     <br>
+				 <center><p1>Source: <a href=https://data.oecd.org/gga/general-government-debt.htm>OECD Data</a></p1>
+				 <br>
+				 <p1>D3 Source: <a href=https://gist.github.com/charlesdguthrie/11356441>Bar Chart</a></p1></center>
+				 <br>
+	             <br>
+			 <div class="row">	
+				 <h2> <center> It may not seem as high as some of the countries, however....</center></h2>
+				 <p>Japan's economy is considered to be stable because most of its debt (including government bond liabilities) are held by its own citizens and the risk of defaulting is quite low. The ‘runner-up’, Greece, has experienced debt crises and subsequent bail-out by IMF in 2010. In fact, 'PIGS' (Portugal, Italy, Greece, and Spain, or 'PIIGS' including Ireland) countries suffered from the recent European debt crisis. 
+				 <br>
+				 <br>
+				 While such a debt crisis is unlikely for the US, rising debt is limiting US capacity to act on important domestic issues.
 			 <br>
-			 </p>
+             <br>
+             <br>
+             <br></p>
 			 </div>
-			 </div>
-			 <h2>Debt to GDP Ratio of G7+3 countries</h2>
-			 <p>General government debt-to-GDP ratio is the amount of a country's total gross government debt as a percentage of its GDP. It is an indicator of an economy's health and a key factor for the sustainability of government finance. </p>
-
-			 <p1>"Debt" is commonly defined as a specific subset of liabilities identified according to the types of financial instruments included or excluded. Debt is thus obtained as the sum of the following liability categories (as applicable): currency and deposits; securities other than shares, except financial derivatives; loans; insurance technical reserves; and other accounts payable. Changes in government debt over time reflect the impact of government deficits. This indicator is measured as a percentage of GDP. All OECD countries compile their data according to the 2008 System of National Accounts (SNA). </p1>
+			 </div> 
+         </div>
 	</div>
 </div>
-<br>
-<br>
-
-
 
 
 	<footer>
@@ -126,12 +144,12 @@
 	<script src="scripts/revenue.js"></script>
 	<script src = "scripts/spending.js"></script>
 
-
 	<!--<script for debt chart> -->
 	<script src= "scripts/debt.js"> </script>
 
 
 	<!--<script for international debt chart> -->
+<script src= "scripts/fiscal-barchart.js"> </script>
 	<!-- <script src= "scripts/international-main.js"> </script> -->
 </body>
 

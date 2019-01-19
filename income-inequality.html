@@ -41,6 +41,7 @@
 			<img src = "images/inequality.png" style="width:800px;height:500px;" align = "center">
 			<p><center/>  Data Source: <a href = "http://gabriel-zucman.eu/files/PSZ2018QJE.pdf">Thomas Picketty, Emmanuel Saez and Gabriel Zucman (2018).</a></center></p>
 			<br>
+			<br>
 
 <!-- 			<h2><center>Some Quick Facts About Economic Wellbeing in the US</h2></div>
 			<div> <center>
@@ -68,13 +69,35 @@
 			</table></center></div>
 		<div class="row-md-12"></div>
 			<p>Source: <a href = "https://www.census.gov/quickfacts/fact/table/US/PST045218"> US Census Bureau (2019);</a> <a href = "https://www.bls.gov/news.release/pdf/empsit.pdf"> US Bureau of Labor Statistics.</a></p><br> -->
+<div class="container">
+	<div class="column">
+	  <div class="row-md-12"></div>
+	  	<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+			<h2>Income inequality remains a persistent problem at the local level as well.</h2>
+			<p><center>In New York City, wage inequality across sectors, as measured by the Theil's Index, has not changed much since 2000.</center></p>
+			<!-- create container element for visualization -->
+			<div id="theil-viz" style ="width: 900px; height: 600px"></div>
+			<br>
+			<p><center> Data Source: <a href="https://www.manhattan-institute.org/sites/default/files/IB-AA-1017.pdf">Manhattan Institute</a></center></p>
+			</div>	
+			<h2>Wage Inequality</h2>
+			<p> The chart above shows the evolution of intersectoral wage inequality in the five boroughs in recent years. Mayor Bill de Blasio ran on a platform of ending the "Tale of Two Cities" in New York. Sympathizers and critics alike, however, note that local income inequality is not a direct operating variable of city government. Unlike national and international income inequality, local inequality in a booming city is a reflection of a city planning regime's capacity to make room for rich and poor alike--rather than displacing the poor to a neighboring jurisdiction. New York's rapid economic growth and status as a global "superstar city" make it all the harder to balance political interests in equity and growth.  </p>
+	</div>
+</div>
+<br>
+<br>
+<br>
+		
+
+<div class = "container">
+	<div class="column">
 		<div class="row-md-12"></div>
-			<h2> Lifelong Consequences of Inequality</h2>
+			<h2> <center> Lifelong Consequences of Inequality</center></h2>
 			<p> One consequence of inequality is a decline in absolute economic mobility, the likelihood that a child will earn more than their parents. Economists <a href = "https://opportunityinsights.org/wp-content/uploads/2018/03/abs_mobility_paper.pdf"> Raj Chetty, David Grusky, Maximilian Hell, Nathaniel Hendren and Jimmy Nrang</a> study how mobility in the United States has changed over time. See the chart below to compare your state to the national average.</p>
 	</div>
 </div>
 	<div class="row">
-		<div class="col-sm-6">
+		<div class="col-sm-6" align="center">
 			<div id = "mobility">
 				<div id = "mobility40">
 				<p><strong><center>Across the United States, absolute income mobility has declined <br>from about 90 percent for children born in 1940 </center></strong></p>
@@ -100,23 +123,9 @@
 	</div>
 </div>
 </div>
-<div class="container">
-	<div class="column">
-	  <div class="row-md-12"></div>
-	  	<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
-			<h1>NYC Wage Inequality</h1>
-			<h2>Theil's T</p>
-			<br>
-			<!-- create container element for visualization -->
-			<div id="viz"></div>
-			<br>
-			<p> Data Source: <a href="https://www.manhattan-institute.org/sites/default/files/IB-AA-1017.pdf">Manhattan Institute</a></p>
-			</div>	
-			<h3>Wage Inequality</h3>
-			<p> The chart above shows the evolution of intersectoral wage inequality in the five boroughs in recent years. Mayor Bill de Blasio ran on a platform of ending the "Tale of Two Cities" in New York. Sympathizers and critics alike, however, note that local income inequality is not a direct operating variable of city government. The city's booming economy and status as a global "superstar city" make it all the harder to balance political interests in equity and growth.  </p>
-	</div>
-</div>
-
+<br>
+<br>
+<br>
 
 <script src="https://d3js.org/d3.v3.js"></script>
 <script src="//d3plus.org/js/d3plus.js"></script>
@@ -138,7 +147,7 @@
 <script src= "scripts/inequality.js" charset="utf-8"> </script>
 
 <!-- script for theils-index stacked area graph -->
-<script src= "scripts/theils-index.js" charset="utf-8"> </script>
+<script src= "scripts/theils-index.js"> </script>
 
 
 </body>
