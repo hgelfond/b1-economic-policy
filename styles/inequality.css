@@ -3,6 +3,7 @@
 #theil-viz {
   width: 1200px;
   height: 500px;
+  stroke: white;
 }
 
 /*NAV BAR STYLES*/
@@ -121,23 +122,6 @@ div#layout {
   text-align: left;
 }
 
-
-.bar {
-  fill: #80cbc4;
-}
-
-text {
-  font-size: 12px;
-  fill: #fff;
-}
-
-path {
-  stroke: gray;
-}
-
-line {
-  stroke: red;
-}
 
 #limit line {
   stroke-width: 3;
