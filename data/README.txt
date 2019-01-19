@@ -79,7 +79,8 @@ the 'scripts/debt.json' D3 visualization.
 
 The source code for the mouseover line chart can be found online at: https://bl.ocks.org/mbostock/3902569
 
-
+3. International Debt bar chart
+2016 data is sourced from the OECD data. The original data can be found in intldebt folder as 'DP_LIVE_19012019023113482.csv' Changed the header using excel and saved as 'intldebt.csv' Created 'convertintldebt.py' to convert the file to json format in 'intldebt1.json' Outcome came with '\ufeff' in fron of the each key but could not encode without it thus deleted manually on the json file. 'intldebt.json' data was read into the 'scripts/fiscal-barchar.js' for the D3 visualization.
 
 
 
