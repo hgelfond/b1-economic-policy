@@ -1,5 +1,5 @@
   // theil index clean data
- d3.json("data/theil/theil-elements.json", function(theilElements)) {
+ d3.json("../data/theil/theil-elements.json", function(theilElements)) {
   // instantiate d3plus
    var visualization = d3plus.viz()
     .container("#theil-viz")  // container DIV to hold the visualization
