@@ -1,9 +1,11 @@
 
-//updatingBarChart.js
+//BAR CHART SCRIPT FOR INTERNATIONAL DEBT ///
+
+
 var setup = function(targetID){
 	//Set size of svg element and chart
 	var margin = {top: 0, right: 0, bottom: 0, left: 0},
-		width = 600 - margin.left - margin.right,
+		width = 900 - margin.left - margin.right,
 		height = 400 - margin.top - margin.bottom,
 		categoryIndent = 4*15 + 5,
 		defaultBarWidth = 2000;
@@ -69,7 +71,6 @@ var redrawChart = function(targetID, newdata) {
 	  .attr("dy",".35em")
 	  .attr("dx","0.5em")
 	  .text(function(d){return d.value;}); 
-	
 	//Add Headlines
 	newRow.append("text")
 	  .attr("class","category")
@@ -79,7 +80,14 @@ var redrawChart = function(targetID, newdata) {
 	  .attr("opacity",0)
 	  .attr("dy",".35em")
 	  .attr("dx","0.5em")
-	  .text(function(d){return d.key});
+	  .attr("fill", function(d) {
+	  	if(d == "United States") {
+	  		return "red";
+	  	  } else {
+	  	  	return "white";}
+	  	  })
+	  .text(function(d){return d.key})
+
 	//////////
 	//UPDATE//
 	//////////
@@ -121,10 +129,10 @@ var redrawChart = function(targetID, newdata) {
 		.attr("transform", function(d){ return "translate(0," + y(d.key) + ")"; });
 };
 //Pulls data
-//Since our data is fake, adds some random changes to simulate a data stream.
+//*Deleted the function to make random number as newData.*
 //Uses a callback because d3.json loading is asynchronous
 var pullData = function(settings,callback){
-	d3.json("data/intldata1.json", function (err, data){
+	d3.json("data/intldebt/intldebt1.json", function (err, data){
 		if (err) return console.warn(err);
 		var newData = data;
 		data.forEach(function(d,i){
