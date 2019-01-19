@@ -107,17 +107,20 @@
 			<h1>NYC Wage Inequality</h1>
 			<h2>Theil's T</p>
 			<br>
-			<img src="theil_index.png" width="600" height="400" alt="Theil Index" class="center">
+			<!-- create container element for visualization -->
+			<div id="theil-viz"></div>
+
 			<br>
 			<p> Data Source: <a href="https://www.manhattan-institute.org/sites/default/files/IB-AA-1017.pdf">Manhattan Institute</a></p>
 			</div>	
 			<h3>Wage Inequality</h3>
-			<p> The chart above shows the evolution of intersectoral wage inequality in the five boroughs in recent years. Mayor Bill de Blasio ran on a platform of ending the "Tale of Two Cities" in New York. Sympathizers and critics alike, however, note that local income inequality is not a direct operating variable of city government. The city's booming economy and status as a global "superstar city" make it all the harder to balance political interests in equity and growth.  </p>
+			<p> The chart above shows the evolution of intersectoral wage inequality in the five boroughs in recent years. Mayor Bill de Blasio ran on a platform of ending the "Tale of Two Cities" in New York. Sympathizers and critics alike, however, note that local income inequality is not a direct operating variable of city government. Unlike national and international income inequality, local inequality in a booming city is a reflection of a city planning regime's capacity to make room for rich and poor alike--rather than displacing the poor to a neighboring jurisdiction. New York's rapid economic growth and status as a global "superstar city" make it all the harder to balance political interests in equity and growth.  </p>
 	</div>
 </div>
 
 
 <script src="https://d3js.org/d3.v3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -135,6 +138,10 @@
 <!-- script for inequality line graph -->
 <script src= "scripts/inequality.js" charset="utf-8"> </script>
 
+<!-- script for theils-index stacked area graph -->
+<script src= "scripts/theils-index.js"> </script>
+
+
 </body>
 
 <footer>
@@ -143,10 +150,3 @@
     DPI-691: Programming and Data for Policymakers, Harvard Kennedy School. Last Updated: 01-18-2019
   </div>
 </div>
-</footer>
-
-</html>
-
-
-
-
