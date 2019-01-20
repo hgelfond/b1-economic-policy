@@ -162,28 +162,28 @@ d3.csv("data/worldmap.csv", function(err, data) {
             html += "</span>";
             html += "</div>";
             
-            $("#worldmap-tooltip").html(html);
+            $("div#worldmap-tooltip").html(html);
             $(this).attr("fill-opacity", "0.8");
-            $("#worldmap-tooltip").show();
+            $("div#worldmap-tooltip").show();
             
             var coordinates = d3.mouse(this);
             
             var map_width = $('.choropleth')[0].getBoundingClientRect().width;
             
             if (d3.event.pageX < map_width / 2) {
-              d3.select("#worldmap-tooltip")
+              d3.select("div#worldmap-tooltip")
                 .style("top", (d3.event.layerY + 15) + "px")
                 .style("left", (d3.event.layerX + 15) + "px");
             } else {
-              var tooltip_width = $("#worldmap-tooltip").width();
-              d3.select("#worldmap-tooltip")
+              var tooltip_width = $("div#worldmap-tooltip").width();
+              d3.select("div#worldmap-tooltip")
                 .style("top", (d3.event.layerY + 15) + "px")
                 .style("left", (d3.event.layerX - tooltip_width - 30) + "px");
             }
         })
         .on("mouseout", function() {
                 $(this).attr("fill-opacity", "1.0");
-                $("#worldmap-tooltip").hide();
+                $("div#worldmap-tooltip").hide();
             });
     
     g.append("path")

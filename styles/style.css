@@ -61,7 +61,7 @@ h1, p {
   padding-bottom: 0;
 }
 
-#caption h1, p {
+/*#caption h1, p {
   text-align: center;
 }
 
@@ -181,4 +181,4 @@ body #worldmap {
   float: right;
 }
 
-
+svg #worldmap-tooltip .tooltip { opacity: 1; }
