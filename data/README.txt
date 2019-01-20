@@ -37,6 +37,11 @@ across states and over time.
 
 The source code for the US state map can be found online at: https://bl.ocks.org/dnprock/5215cc464cfb9affd283
 
+4. Theil's Index Wage Inequality Chart
+
+Theil's Index is an "additively separable" measure of spread that allows estimation of inequality across groups from summary data even when individual microdata is unavailable. The measure is estimated from the Quarterly Census of Employment and Wages by the NYS Department of Labor here: https://www.labor.ny.gov/stats/nyc/index.shtm. 
+
+Methodology for calculating Theil's Index is available in this paper: https://www.manhattan-institute.org/download/10714/article.pdf. This methodology was replicated with annual QCEW through 2017. 
 
 ----------------------------------------------------------------------------
 ASSET VALUATION
