@@ -1,8 +1,8 @@
 Type,Category,Amount
-Discretionary,Defense,3.05
-Discretionary,Non-Defense,3.23
-Mandatory,Social Security,4.83
-Mandatory,Medicare,2.86
-Mandatory,Medicaid,2.24
-Mandatory,Income Security,1.44
-Mandatory,Other,1.12
+Discretionary,Defense,3.1
+Discretionary,Non-Defense,3.2
+Mandatory,Social Security,4.8
+Mandatory,Medicare,2.9
+Mandatory,Medicaid,2.2
+Mandatory,Income Security,1.4
+Mandatory,Other,1.1
