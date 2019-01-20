@@ -22,13 +22,7 @@ Tables II.xlsx, found on their website: http://gabriel-zucman.eu/usdina/ and in 
 The data was pulled and copied into 'data/inequality_distr.xlsx,' where a static image of income inequality was made with Excel's graphing 
 tools. The PNG file, titled 'inequality.png' can also be found in the images folder and referenced on income-inequality.html. 
 
-
-2. Quick facts chart
-The data for the quick facts chart was copied directly from the US Census Bureau and the US Bureau of Labor Statistics and input directly 
-into table formatting within the 'income-inequality.html' file.
-
-
-3. Absolute Economic Mobility
+2. Absolute Economic Mobility
 The mobility data presented in the economic mobility maps was estimated by a research team led by Raj Chetty at Harvard. See the following 
 link for the research paper describing their methodology and original data sources: https://opportunityinsights.org/wp-
 content/uploads/2018/03/abs_mobility_paper.pdf
