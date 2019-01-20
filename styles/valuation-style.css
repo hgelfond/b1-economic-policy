@@ -50,7 +50,7 @@ h1, p {
   padding-bottom: 0;
 }
 
-#caption h1, p {
+/*#caption h1, p {
   text-align: center;
 }
 
@@ -106,7 +106,7 @@ text.label {
 
 text.source {
   font-size: 10px;
-}
+}*/
 
 
 /* D3 Graphic Styling */
