@@ -7,9 +7,8 @@ INDEX
 ----------------------------------------------------------------------------
 
 1. World Map
-GDP per capita data was downloaded from the Wolrd Bank website: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
-Modified the cvs data using Excel to extract only header, country name, and GDP per capita data in 2017. Sorted and inserted ranks. 
-Graphic created in Stata following tutorial from: https://www.stata.com/support/faqs/graphics/spmap-and-maps/.
+GDP per capita data was downloaded from the Wolrd Bank website: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD and saved as 'world_map_GDP_per_capita_ORIGINAL_data.csv'
+Modified the cvs data using Excel to extract only header, country name, and GDP per capita data in 2017. File saved as 'worldmap.csv' and read into the 'scripts/worldmap' D3 visualization.
 
 
 ----------------------------------------------------------------------------
@@ -74,8 +73,7 @@ The source code for the stacked bar chart can be found online at: http://bl.ocks
 Historical debt data (1968-2017) is sourced from the Congressional Budget Office's April 2018 Update to the Budget and Economic Outlook 
 Historical Data supplement. The original data can be found in Tab 1 of the 'CBO_historical.xlsx' file within the data folder. This data 
 was copied into a csv, titled 'debt.csv' and also found in the data folder. The data for 2018-2028 is sourced from 
-'CBO_10yr_projections.xlsx' and was copied into 'debt.csv' for use in the dynamic debt visualization. The 'debt.csv' data was read into 
-the 'scripts/debt.json' D3 visualization.
+'CBO_10yr_projections.xlsx' and was copied into 'debt.csv' for use in the dynamic debt visualization. The 'debt.csv' data was read into the 'scripts/debt.js' D3 visualization.
 
 The source code for the mouseover line chart can be found online at: https://bl.ocks.org/mbostock/3902569
 
