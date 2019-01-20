@@ -50,7 +50,11 @@ h1, p {
   padding-bottom: 0;
 }
 
+<<<<<<< HEAD
 /*#caption h1, p {
+=======
+/*A#caption h1, p {
+>>>>>>> d11f08bd7f57813ee25ca02f60f59507058699ce
   text-align: center;
 }
 
