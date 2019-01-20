@@ -240,16 +240,6 @@
           .style('visibility', 'hidden');
      })
 
-// Line Data categories
-    avg_pe_since_2000.value = "line";
-
-// drawing lines
-    svg.selectAll(".lines").data(lineData).enter().append("g").attr("class", "line")
-    .each(function (d) {
-        Name=d[0].Name
-        d3.select(this).append("path").attr("d", function (b) { return line(b) }).style({ "stroke-width": "2px", "fill": "none" }).style("stroke", LineColor(Name)).transition().duration(1500);
-    })
-
     chart.append('g')
     .attr('class', 'grid')
     .call(d3.axisLeft()
